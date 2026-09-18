@@ -218,8 +218,9 @@ python3 -m venv .venv
 make verify
 ```
 
-The verification chain includes doctrine, scenarios, tests, chronology,
-whitespace, and public-surface coherence checks.
+The verification chain includes doctrine checks, decision scenarios, target-v2
+contract and design validators, retained public tests, public-surface coherence,
+and whitespace checks.
 
 ## License and security
 
