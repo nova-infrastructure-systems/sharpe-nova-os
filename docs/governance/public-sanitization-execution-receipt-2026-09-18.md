@@ -1,6 +1,6 @@
 # Public Sanitization Execution Receipt — 2026-09-18
 
-**Status:** authorized deletion-bearing repository sanitization; candidate prepared pending exact-head CI and merge
+**Status:** VERIFIED_COMPLETE — exact-head CI passed and authorized sanitization merged to public `main`
 **Repository:** `nova-infrastructure-systems/sharpe-nova-os`
 **Baseline public main:** `41547dea493645a07ea755273c280400db4b59cc`
 **Authority:** explicit Architect authorization on September 18, 2026
@@ -27,13 +27,13 @@ External systems execute.
 Nova does not execute.
 ```
 
-## Candidate removal scope
+## Executed removal scope
 
-Relative to the authorized baseline, the candidate removes 388 current-tree
-paths while preserving Git history.
+Relative to the authorized baseline, PR #68 removed 388 current-tree paths while
+preserving Git history.
 
 ```yaml
-candidate_removal_scope:
+executed_removal_scope:
   deleted_paths_total: 388
   NSF_program_docs_removed: 19
   NSF_demo_paths_removed: 18
@@ -48,13 +48,13 @@ candidate_removal_scope:
   canonical_contract_files_removed: 0
 ```
 
-The current public tree is reduced from 648 tracked paths at baseline to a
-contract/proof-oriented projection. The final tracked-path count may differ by
-one or more governance receipt files added to document the sanitization itself.
+The public tree was reduced from 648 tracked paths at the authorized baseline to
+a contract/proof-oriented projection. Governance receipts added during the
+operation remain part of that projection.
 
 ## Public material preserved
 
-The candidate retains the public surfaces required to explain, inspect, and
+The merged public tree retains the surfaces required to explain, inspect, and
 validate Nova without carrying the production implementation:
 
 - `README.md`, `CURRENT_STATE.md`, `CATEGORY.md`, and `SYSTEM_IDENTITY.md`;
@@ -85,8 +85,11 @@ local_repository_validation:
   markdown_relative_link_errors: 0
 ```
 
-This is local repository evidence. Exact-head GitHub CI remains required before
-merge.
+GitHub independently reran the public verification workflow on exact head
+`a85d1e72235efaeed59fcf69621216a7d4c5c856`. Public Projection CI run #1
+completed successfully with 127 tests passed and 70 decision scenarios
+processed. PR #68 then merged to public `main` as
+`738988184d5dcf545c66362ae402e0b604f8cf21`.
 
 ## State separation
 
@@ -106,12 +109,24 @@ capital_effect: none
 Removal from the current public tree does not make previously published material
 secret. Git history preserves prior disclosure and provenance.
 
-## Completion condition
+## Completion evidence
 
-The sanitization becomes repository-complete only after:
+```yaml
+completion_evidence:
+  PR: 68
+  exact_head: a85d1e72235efaeed59fcf69621216a7d4c5c856
+  exact_head_CI:
+    workflow: Public_Projection_CI
+    run_number: 1
+    result: PASS
+    pytest: 127_passed
+    decision_scenarios: 70_processed
+  merge_commit: 738988184d5dcf545c66362ae402e0b604f8cf21
+  public_main_verified_after_merge: true
+  open_PRs_after_merge: 0
+  Git_history_preserved: true
+  production_effect: none
+```
 
-1. the exact candidate head passes GitHub CI;
-2. the changed-file scope is reviewed against this receipt;
-3. the PR is merged to public `main`;
-4. public `main` and open-PR state are freshly reverified;
-5. repository metadata is reconciled separately where supported.
+Repository metadata remains a separate presentation setting and does not affect
+the completion of deletion-bearing current-tree sanitization.
