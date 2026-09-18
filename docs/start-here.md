@@ -99,9 +99,11 @@ moment.
 
 1. [Current State](../CURRENT_STATE.md)
 2. [System Identity](../SYSTEM_IDENTITY.md)
-3. [Legacy v1](legacy-v1/README.md)
-4. [Target v2 contract](architecture/external-review-context-contract-v2.md)
-5. [Tests and examples](../tests/)
+3. [Target v2 contract](architecture/external-review-context-contract-v2.md)
+4. [Review-context schema](../specs/review_context_contract_v2.json)
+5. [Synthetic fixtures](../fixtures/target-v2/)
+6. [Public validators](../scripts/)
+7. [Retained public tests](../tests/)
 
 ### Governance review
 
@@ -111,11 +113,16 @@ moment.
 4. [Chronology standards](chronology/)
 5. [Technical evidence map](validation/technical-evidence-map.md)
 
-### Research review
+### Historical and provenance review
 
-Research and grant materials are supporting workstreams. They do not establish
-current production readiness, institutional use, buyer validation, adoption, or
-product-market fit.
+1. [Legacy v1](legacy-v1/README.md)
+2. [Migration and isolation plan](migrations/v1-admission-isolation-plan.md)
+3. [Public/private repository boundary](governance/public-private-repository-boundary-v0.1.md)
+4. [Public sanitization receipt](governance/public-sanitization-execution-receipt-2026-09-18.md)
+
+Historical and provenance material explains how the current public projection
+was reached. It does not establish current production authority or revive
+superseded program work.
 
 ## 7. Important non-claims
 
