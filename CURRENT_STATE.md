@@ -134,8 +134,10 @@ repository_architecture:
     governance_accepted: true
     authority_transfer_complete: true
     production_source_cutover_observed_complete: true
-    public_projection_hygiene: in_progress
-    public_sanitization_complete: false
+    public_projection_hygiene: complete
+    public_sanitization_complete: true
+    public_sanitization_PR: 68
+    public_sanitization_merge_commit: 738988184d5dcf545c66362ae402e0b604f8cf21
 
   private_main_protection:
     status: BLOCKED_BY_PLATFORM_POLICY
@@ -180,7 +182,7 @@ deployment_reconciliation:
   public_repository_dependency_for_observed_active_production_runtime: false
   post_cutover_public_contract_validation: repository_verified_complete
   post_cutover_private_implementation_validation: repository_verified_complete
-  removal_gate: BLOCKED_PENDING_STABILIZATION_CCO_REVIEW_AND_ARCHITECT_DELETION_AUTHORITY
+  removal_gate: SATISFIED_FOR_PR_68_REPOSITORY_SANITIZATION
 
 repository_transition_effects:
   parallel_provider_continuity_candidate_effect: observed_live
@@ -381,7 +383,7 @@ The repository and current evidence establish:
 * an exercised provider rollback on the private continuity candidate;
 * a demonstrated rollback failure mode in which provider-held credential state was not automatically preserved;
 * successful operator-observed restoration of credential state and three-of-three authenticated continuity after rollback;
-* repository-verified completion of the post-cutover public-contract and private-implementation validation gate, recorded in `docs/operations/post-cutover-repository-validation-2026-08-28.md`;
+* repository-verified completion of the post-cutover public-contract and private-implementation validation gate, with detailed operating evidence retained privately and in Git history;
 * Architect-attested CDP Admin/Owner access with project-setting and API-key management authority;
 * one active CDP API key classified founder/internal;
 * Architect-attested current CDP x402/facilitator disabled state;
@@ -392,7 +394,6 @@ The repository and current evidence establish:
 * an external public-boundary check matching the repository-defined containment contract;
 * Architect approval of the final production/discovery incident disposition as `CONTAINED_HISTORICALLY_UNATTESTED`;
 * a closed Readiness Gate Baseline;
-* an initialized content operating system;
 * a canonical private synthetic target-v2 reference adapter with no runtime,
   public-endpoint, production, or authority effect.
 
@@ -422,14 +423,14 @@ The available evidence does not establish:
 
 ## Current implementation priority
 
-The accepted-state authority transfer and post-cutover repository validation are
-complete. The current public-repository priority is projection hygiene:
-presenting the externally supportable Nova category, retail public-service state,
-and institutional non-authority boundary without exposing private production
-machinery or corporate accepted state.
+The accepted-state authority transfer, private-source continuity work, and
+authorized public-repository sanitization are complete. The public repository is
+now the bounded external contract/proof surface; canonical production machinery,
+corporate accepted state, and internal operating evidence remain private.
 
-This projection update does not authorize deletion of retained public history or
-runtime artifacts. Any deletion-bearing hygiene remains a separate review.
+PR #68 consumed the Architect's September 18, 2026 deletion authority for that
+specific repository sanitization. Git history remains preserved. No standing
+deletion authority or production authority is created by that completed action.
 
 Gate 5 remains not started and has no implementation or production-activation
 authority.
@@ -460,7 +461,9 @@ current_readiness_priority:
     public_repository_dependency_for_observed_active_production_runtime: false
     public_contract_validation: repository_verified_complete
     private_implementation_validation: repository_verified_complete
-    public_runtime_removal: blocked_pending_stabilization_CCO_review_and_architect_authority
+    public_current_tree_sanitization: complete_PR_68
+    public_runtime_service_removal: not_performed
+    production_effect_from_sanitization: none
 
   production_incident:
     status: contained_historically_unattested
@@ -541,13 +544,9 @@ See:
 * [Production Readiness Register](docs/operations/production-readiness-register.md)
 * [Phase 1 Inspection Status](docs/inspection/phase-1-inspection-status.md)
 
-The readiness evidence chain is maintained under:
-
-* `docs/operations/readiness-reconciliation-2026-08-19.md`;
-* `docs/operations/incident-closure-receipt-2026-08-24.md`;
-* `docs/operations/post-cutover-repository-validation-2026-08-28.md`.
-
-These evidence receipts are intentionally not part of the public entry-link surface.
+Detailed production-readiness, incident, and post-cutover operating receipts are
+retained in the private operating-evidence surface and Git history. They are not
+part of the current public tree.
 
 ## Evidence boundary
 
@@ -561,10 +560,10 @@ separately identified as independently verified.
 The private continuity and immediate cutover proof establish submitted evidence
 for tested private-source alignment, preserved hostname, containment, complete
 credential parity, three-of-three authentication, rollback mechanics, and
-recovery. They do not establish independent provider verification or authority
-to remove the public implementation surface. Accepted-state authority transfer
-is established separately by the explicit exact-head Architect authorization
-and the verified public/private transfer chain.
+recovery. They do not establish independent provider verification. Public-tree
+sanitization authority was separately granted by the Architect and consumed by
+PR #68; accepted-state authority transfer remains separately established by its
+own exact-head authorization and verified public/private transfer chain.
 
 The rollback exercise specifically demonstrated that provider-held credential
 state may require restoration and revalidation even when the provider reports
@@ -589,7 +588,7 @@ A generic repository artifact, passing test suite, design approval, offline
 proof, Architect-attested provider observation, operator-observed continuity or
 cutover test, closed readiness baseline, or contained incident does not
 independently establish system-wide production readiness, institutional use,
-buyer demand, adoption, pricing power, product-market fit, or authority to
-remove public implementation surfaces. Accepted-state authority transfer
-requires its own explicit Architect authorization and verified transfer
-evidence; that requirement was satisfied by the transfer recorded above.
+buyer demand, adoption, pricing power, product-market fit, deletion authority,
+or production authority. The completed public sanitization and accepted-state
+transfer each relied on separate explicit Architect authorization and must not be
+treated as standing authority for future actions.
