@@ -1,44 +1,13 @@
 # Sharpe Nova OS — Category Definition
 
-## The Shift
+## Category
 
-Capital workflows are becoming increasingly agent-prepared and machine-mediated.
+Sharpe Nova OS is **pre-execution decision-context infrastructure** for
+consequential machine-prepared capital actions.
 
-Execution is getting faster. The harder problem is preserving the context, constraints,
-uncertainty, and authority boundary around a consequential action before capital moves.
-
----
-
-## The Problem
-
-A transaction system can prove what executed and which credentials signed.
-
-It may not preserve the exact decision context that local authority reviewed:
-
-- which proposal version was under consideration;
-- which sources were current;
-- which evidence was missing, stale, conflicted, or unresolved;
-- which institution-owned constraints applied;
-- which prior accepted governance memory was relevant;
-- where decision authority remained local.
-
-As agents prepare actions faster, losing that distinction becomes more consequential.
-
----
-
-## The Missing Layer
-
-Sharpe Nova OS addresses the pre-execution gap between **prepared action** and
-**local decision authority**.
-
-It is not an execution kernel or authorization control plane.
-
-It is a **pre-execution decision discipline layer** that conditions capital through
-telemetry, Reflex Memory, and constraint logic before execution.
-
----
-
-## Canonical Boundary
+Its deeper architectural frame is a **pre-execution decision discipline layer**
+that conditions capital through telemetry, Reflex Memory, and constraint logic
+before execution.
 
 ```text
 Agent prepares an action.
@@ -56,85 +25,119 @@ that position.
 Nova does not decide who holds that authority and does not inherit it by being
 required in the workflow.
 
----
+## The shift
 
-## Exact-Action Binding
+Capital workflows are becoming increasingly machine-prepared and
+machine-mediated.
 
-Nova review context is designed to remain bound to the exact proposal version
-that was reviewed.
+Agents, wallets, policy systems, treasury systems, custodians, and execution
+rails can each perform their own job correctly while the institution still
+lacks one coherent review state around the exact action before authority
+decides.
+
+The missing object is not another execution instruction.
+
+It is the governed relationship among evidence, history, constraints, unresolved
+conditions, and the exact proposed action under review.
+
+## The problem
+
+A transaction record can show what moved.
+
+A policy record can show that a rule exists.
+
+A validation can show that a test passed.
+
+A historical record can show that an exception occurred.
+
+None of those facts alone establishes how they related to the exact action when
+local authority reviewed it.
+
+Nova preserves those distinctions.
 
 ```text
-prepared action version
-        ↕
-Nova review context / proof
-        ↕
-local authority process
-        ↓
-external execution
+source existence != verification
+history != present authority
+constraint existence != constraint applicability
+field completeness != review coherence
+validation passed != institutional permission
+payment != authority
+review context != execution permission
 ```
 
-An institution may decide that a valid Nova review-context object is required
-before its own authority process proceeds.
+## The layer
 
-That requirement belongs to the institution.
+Nova sits between prepared action and local decision authority.
+
+```text
+[ Agent / Strategy / Local System ]
+                |
+                v
+      prepared capital action
+                |
+                v
+[ Sharpe Nova OS ]
+ governed review context + integrity
+                |
+                v
+[ Local Authority ]
+      reviews and decides
+                |
+                v
+[ External Execution Systems ]
+```
+
+Nova can become a required input to an institution's authority process without
+becoming that authority.
 
 ```text
 required input to authority
 != authority
 ```
 
-Nova does not approve, deny, authorize, sign, settle, or execute the action.
+## Exact-action binding
 
----
+Review context should remain bound to the exact proposal version that was
+reviewed.
 
-## What Nova Preserves
+A later revision, different destination, changed amount, new counterparty,
+different evidence state, or changed institutional requirement can create a
+different review context even when many underlying artifacts remain the same.
 
-Nova is designed to preserve and structure:
+This preserves reconstructability without implying that Nova decides whether the
+action should proceed.
 
-- proposal-version identity;
-- source provenance and freshness;
+## What Nova preserves
+
+Depending on the bounded workflow and supplied context, Nova can preserve:
+
+- prepared-action and proposal-version identity;
+- source provenance, source state, and observation time;
 - contradiction and missing-evidence visibility;
 - institution-provided constraint context;
-- chronology references;
-- governed Reflex Memory references where authorized;
+- temporal and chronology context;
+- governed Reflex Memory references;
 - review completeness and unresolved conditions;
-- authority handoff and non-authority boundaries.
+- deterministic integrity material;
+- explicit authority handoff.
 
-Reflex Memory is not merely a snapshot of what the world looked like.
-It preserves accepted governance memory that may condition future review posture
+Reflex Memory is not merely a snapshot of what the world looked like. It
+preserves accepted governance memory that may condition future review posture
 without creating decision authority.
 
----
+## What Nova enables
 
-## What It Enables
+Nova is designed to support:
 
 - reproducible pre-execution review context;
-- durable distinction between preparation, review, decision, signing, and execution;
-- portable context that can survive changes in models, agents, wallets, or execution rails;
-- institutional review continuity without transferring authority to Nova;
-- machine-consumable context that can become a required precondition without becoming a control plane.
+- durable separation between preparation, review, decision, signing, settlement,
+  and execution;
+- portable context that can survive changes in models, agents, wallets,
+  custodians, and execution rails;
+- institution-controlled review continuity across replaceable systems;
+- machine-consumable context without transferring local authority.
 
----
-
-## Where It Fits
-
-```text
-[ Agent / Strategy / Local System ]
-                ↓
-      prepared financial action
-                ↓
-[ Sharpe Nova OS ]
- governed review context + proof
-                ↓
-[ Local Authority ]
-     reviews and decides
-                ↓
-[ External Execution Systems ]
-```
-
----
-
-## What Nova Is Not
+## What Nova is not
 
 Nova is not:
 
@@ -143,17 +146,24 @@ Nova is not:
 - a prediction layer;
 - a portfolio optimizer;
 - an execution engine;
-- an approval or authorization authority;
-- a wallet, custodian, settlement rail, or signing system;
-- a policy-enforcement kernel that owns the institution's decision.
+- a wallet, custodian, or signing system;
+- an institutional approval or authorization authority;
+- a policy engine that owns the institution's decision;
+- a generic context warehouse or memory product.
 
----
+## Category test
 
-## Final Statement
+The category remains coherent only if this boundary survives:
+
+> Nova may structure, preserve, and make review context portable. It does not
+> convert evidence into permission, memory into policy, payment into authority,
+> or context into execution.
+
+## Final statement
 
 Nova does not determine whether capital should move.
 
-Nova structures verifiable decision context around the exact action under review
+Nova structures governed decision context around the exact action under review
 before local authority decides.
 
 Authority remains local.

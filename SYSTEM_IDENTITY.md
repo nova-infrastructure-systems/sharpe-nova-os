@@ -1,92 +1,136 @@
-# System Identity
+# Sharpe Nova OS — System Identity
 
-## Product-Generation Status
+## Canonical identity
 
-```yaml
-current_repository_state:
-  Legacy_v1:
-    implemented: true
-    model: decision_admission
-    canonical_future_external_contract: false
-    consumer_dependency: unverified
-    migration_status: pending
+Sharpe Nova OS is a **pre-execution decision discipline layer** that conditions
+capital through telemetry, Reflex Memory, and constraint logic before execution.
 
-  proposed_v2:
-    implemented: false
-    model: non_authority_review_context
-    canonical_future_external_contract: true
-```
-
-The current repository includes historical and implemented Legacy v1 identity
-language. That language describes the existing admission runtime and must not be
-used to redefine the approved future external product model.
-
-The approved future external boundary is:
+Externally, Nova is decision-context infrastructure for consequential
+machine-prepared capital actions.
 
 ```text
-Agent prepares action.
+Agent prepares an action.
 Nova structures review context.
 Local authority decides.
 External systems execute.
 Nova does not execute.
 ```
 
-## Legacy v1 Implemented Identity
+Local authority is an institution-owned role. Nova does not decide who occupies
+that role and does not inherit authority by becoming a required input to the
+institution's workflow.
 
-> The following section documents the identity and semantics of the implemented
-> Legacy v1 decision-admission runtime. It is retained for behavioral,
-> migration, replay, and historical traceability.
->
-> It does not define Nova’s canonical future external product model.
+## Repository identity
 
-Sharpe Nova OS is a pre-execution decision admissibility layer.
+```yaml
+repository:
+  public_projection: nova-infrastructure-systems/sharpe-nova-os
+  public_role: NON_AUTHORITATIVE_GOVERNED_PROJECTION
+  canonical_corporate_accepted_state: nova-infrastructure-systems/nova-core
+```
 
-Its primary function is to define the admissible state of a proposed capital decision before execution.
+This repository publishes approved doctrine, contracts, schemas, examples, and
+externally supportable state. It is not the source of current corporate
+accepted-state authority.
 
-## Canonical Classification
+## Product and access planes
 
-- System name: `Sharpe Nova OS`
-- System type: `pre_execution_decision_admissibility_layer`
-- Primary function: `define decision admissibility before execution`
-- Interface: `machine_readable_api`
-- Control model: `denial_first`
+```yaml
+system_identity:
+  institutional_review_context:
+    canonical_direction: target_v2_non_authority_review_context
+    target_v2_runtime_implemented: false
+    target_v2_production_active: false
+    institutional_pilot_started: false
 
-## Negative Classification
+  retail_agent_plane:
+    public_machine_commerce_surface: active
+    settlement_environment: Base_mainnet
+    payment_asset: USDC
+    payment_protocol: x402_v2
+    authority_effect: none
+    approval_effect: none
+    execution_effect: none
+    access_effect: context_resource_access_only
+
+  Legacy_v1:
+    implemented: true
+    canonical_future_external_model: false
+    retained_for:
+      - historical_traceability
+      - migration_analysis
+      - dependency_inspection
+      - test_coverage
+```
+
+The retail agent plane and institutional plane are separate. Retail payment
+access does not create institutional identity, workflow authorization,
+institutional production activation, or capital authority.
+
+## Public resources
+
+The bounded retail machine-commerce surface exposes:
+
+| Resource | Job | Fixed price |
+|---|---|---:|
+| State Ping | What context exists? | 0.002 USDC |
+| Context Delta | What materially changed? | 0.02 USDC |
+| Governed Review Context | What review context belongs around this exact proposed action? | 0.10 USDC |
+| Decision Context Packet | What portable integrity-bound review artifact should local authority receive? | 1.00 USDC |
+
+A payment for one resource does not authorize another resource.
+
+**NO SECOND PAYMENT without separate explicit capital authorization.**
+
+## What Nova preserves
+
+Nova structures and preserves review context including, where available and
+authorized:
+
+- exact prepared-action and proposal-version identity;
+- source provenance, authority state, and observation time;
+- contradiction, missing-evidence, freshness, and limitation context;
+- institution-provided constraint context;
+- chronology references;
+- governed Reflex Memory references;
+- review completeness and unresolved conditions;
+- deterministic integrity material;
+- explicit authority handoff.
+
+The existence of a record does not create the meaning of that record for the
+current action.
+
+```text
+source existence != verification
+history != accepted chronology
+memory != policy
+constraint existence != constraint applicability
+complete context != approval
+integrity != authenticity
+payment != authority
+review context != execution permission
+```
+
+## Negative classification
 
 Sharpe Nova OS is not:
 
-- a trading system
-- an execution engine
-- a trade-signal source
-- a generic agent toolkit
+- a trading system;
+- a signal engine;
+- a prediction layer;
+- a portfolio optimizer;
+- an execution engine;
+- a wallet, custodian, or signing system;
+- a generic agent framework;
+- a policy engine that owns institutional policy;
+- an approval or authorization authority.
 
-## Core Components
+## Legacy v1 identity boundary
 
-- telemetry integrity
-- reflex memory
-- constraint interface
+Legacy v1 contains decision-admission terminology and behavior. Those semantics
+remain valid for historical implementation, replay, migration, and dependency
+inspection only.
 
-## Interpretation Rule
+They do not define Nova's canonical future external product identity.
 
-The repository should be read as an interpretation boundary plus integration surface. Any downstream system should bind to the Nova API contract rather than infer a broader role.
-
-Primary decision authority belongs to `decision_status`.
-Supporting fields such as `constraint_effect`, `intervention_type`, `failure_class`, `impact_on_outcomes`, `adjustment`, and deeper constraint calculations remain explanatory only.
-Proof verifies the governed decision state; it does not override `decision_status`.
-
-## Governance Doctrine
-
-Sharpe Nova OS operates under explicit governance discipline:
-
-- Runtime Artifact Policy
-- Signal Pressure Discipline Protocol
-
-These define:
-
-- what is system definition vs runtime state
-- how governance signals are interpreted and acted upon
-- how discipline is preserved under system pressure
-
-All implementations and operator behavior must adhere to these policies.
-
-These documents are part of the system boundary and must be enforced as binding integration doctrine.
+For current state, read [CURRENT_STATE.md](CURRENT_STATE.md).
