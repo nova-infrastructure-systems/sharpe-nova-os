@@ -113,7 +113,9 @@ Depending on the bounded workflow and supplied context, Nova can preserve:
 - deterministic integrity material;
 - explicit authority handoff.
 
-Reflex Memory may inform future review without becoming policy or authority.
+Reflex Memory is not merely a snapshot of what the world looked like. It
+preserves accepted governance memory that may condition future review posture
+without creating decision authority.
 
 ## What Nova enables
 
