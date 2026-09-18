@@ -1,6 +1,6 @@
 # Public Projection Sanitization Execution v0.1
 
-**Status:** inventory complete; production source cutover evidence submitted; repository validation complete; removals blocked pending stabilization, CCO review, and Architect deletion authority  
+**Status:** inventory complete; production source cutover and repository validation complete; stabilization and CCO completion review satisfied; removals blocked only pending explicit Architect deletion authority  
 **Baseline repository:** `nova-infrastructure-systems/sharpe-nova-os`  
 **Baseline branch:** `main`  
 **Baseline SHA:** `eeba729534088bdec705e84219188bb5aaaa14eb`  
@@ -62,7 +62,7 @@ deployment_reconciliation:
   production_continuity_preserved: true
   public_contract_validation_rerun: passed_repository_verified
   private_implementation_validation_rerun: passed_repository_verified
-  removal_gate: BLOCKED_PENDING_STABILIZATION_CCO_REVIEW_AND_ARCHITECT_DELETION_AUTHORITY
+  removal_gate: BLOCKED_PENDING_EXPLICIT_ARCHITECT_DELETION_AUTHORITY
 ```
 
 The rollback exercise established that a provider `Live` state and healthy
@@ -87,6 +87,29 @@ No runtime, deployment, payment, control, telemetry, or provider-topology file
 may be removed from the public branch until stabilization, CCO completion
 review, and explicit Architect authorization for deletion-bearing sanitization
 are complete.
+
+## Completion-state reconciliation — September 18, 2026
+
+The private canonical repository now records the Legacy continuity workstream as
+complete in `docs/operations/legacy-continuity-completion-receipt-2026-08-28.md`.
+That receipt records both the stabilization observation and CCO completion review
+as satisfied.
+
+This narrows the remaining public-sanitization gate to one explicit authority
+question:
+
+```yaml
+deletion_bearing_public_sanitization:
+  stabilization_observation: verified_complete
+  CCO_completion_review: satisfied
+  explicit_Architect_deletion_authority: not_granted
+  safe_to_execute_now: false
+```
+
+Repository cleanup that does not delete or remove current public paths may
+continue. Moving or removing files from the current public tree remains
+deletion-bearing sanitization and requires a separate explicit Architect
+authorization.
 
 ## Exact classification rules
 
@@ -231,7 +254,7 @@ public_projection_sanitization:
   public_CI_weakened: false
   deletion_bearing_sanitization_started: false
   sanitization_complete: false
-  blocker: stabilization_CCO_review_and_architect_deletion_authority_required
+  blocker: explicit_Architect_deletion_authority_required
 ```
 
 ## Required unblocking evidence
@@ -244,11 +267,11 @@ Before a deletion-bearing sanitization commit:
 4. verify provider identity state, exact three-credential fingerprint parity, and three-of-three authenticated behavior after cutover — **evidence submitted**;
 5. exercise rollback/recovery behavior on the bounded private continuity candidate — **evidence submitted**, with the material finding that provider-held credential state is not automatically preserved by rollback;
 6. preserve provider evidence separately from public repository configuration — **private evidence receipts updated; independent verification remains outstanding**;
-7. complete a stabilization observation with the primary service left unchanged unless an actual regression requires intervention — **in progress**;
+7. complete a stabilization observation with the primary service left unchanged unless an actual regression requires intervention — **verified complete in the private Legacy continuity completion receipt**;
 8. re-run the full public contract validation suite after cutover — **repository-verified complete**;
 9. re-run the private implementation validation suite after cutover — **repository-verified complete**;
-10. reconcile the transition artifacts to the post-cutover state and complete CCO review — **in progress**;
-11. obtain explicit Architect authority before any deletion-bearing public sanitization — **not yet granted**.
+10. reconcile the transition artifacts to the post-cutover state and complete CCO review — **verified complete in the private Legacy continuity completion receipt**;
+11. obtain explicit Architect authority before any deletion-bearing public sanitization — **not yet granted; this remains the sole removal gate**.
 
 Evidence submission is not independent verification. Repository validation does
 not authorize payment or settlement change, retail RP8B completion,
