@@ -96,7 +96,7 @@ Before moving between model sessions or chat windows, preserve:
 Use:
 
 ```text
-docs/operations/templates/decision-state-handoff.md
+docs/governance/chronology-preservation-standard.md
 ```
 
 ## Model Upgrade Rule

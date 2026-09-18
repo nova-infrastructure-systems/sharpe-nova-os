@@ -48,7 +48,7 @@ PROVIDER_ONLY
 
 ### Retail runtime
 
-The public repository currently contains a substantial `retail_context/` implementation, including context construction, production configuration, production controls, telemetry, delivery recovery, facilitator integration, request binding, and control-store logic.
+The baseline public repository contained a substantial `retail_context/` implementation. That private-target implementation has been removed from the current public tree under the September 18, 2026 sanitization authority; Git history preserves the prior disclosure.
 
 Target treatment:
 

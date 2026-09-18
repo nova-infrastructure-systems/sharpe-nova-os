@@ -1,9 +1,9 @@
 # Public Projection Sanitization Execution v0.1
 
-**Status:** inventory complete; production source cutover and repository validation complete; stabilization and CCO completion review satisfied; removals blocked only pending explicit Architect deletion authority  
-**Baseline repository:** `nova-infrastructure-systems/sharpe-nova-os`  
-**Baseline branch:** `main`  
-**Baseline SHA:** `eeba729534088bdec705e84219188bb5aaaa14eb`  
+**Status:** deletion-bearing public sanitization authorized by the Architect on September 18, 2026; execution in progress on a non-production repository branch
+**Baseline repository:** `nova-infrastructure-systems/sharpe-nova-os`
+**Baseline branch:** `main`
+**Baseline SHA:** `eeba729534088bdec705e84219188bb5aaaa14eb`
 **Tracked paths inventoried:** 638
 
 ## Governing boundary
@@ -76,9 +76,8 @@ source while preserving the tested Legacy external contract and the complete
 three-identity production credential set. This is operator-observed evidence,
 not independent provider verification.
 
-The post-cutover repository validation is recorded in
-[`docs/operations/post-cutover-repository-validation-2026-08-28.md`](../operations/post-cutover-repository-validation-2026-08-28.md).
-It verifies the current public contract suite, current private repository suite,
+The post-cutover repository validation is retained in private operating evidence and Git history.
+It verified the current public contract suite, current private repository suite,
 the exact deployed private Legacy source CI result, and critical Legacy runtime
 blob identity. Repository validation does not convert operator-observed provider
 evidence into independent provider verification.
@@ -102,8 +101,8 @@ question:
 deletion_bearing_public_sanitization:
   stabilization_observation: verified_complete
   CCO_completion_review: satisfied
-  explicit_Architect_deletion_authority: not_granted
-  safe_to_execute_now: false
+  explicit_Architect_deletion_authority: granted_2026_09_18
+  safe_to_execute_now: true_repository_only_no_production_effect
 ```
 
 Repository cleanup that does not delete or remove current public paths may
@@ -156,10 +155,9 @@ path_classification:
       public_exceptions:
         - scripts/doctrine_lint.py
         - scripts/run_decision_scenario_suite.py
-        - scripts/validate_arc_market_signal_watch.py
         - scripts/validate_gate3_field_derivation.py
+        - scripts/gate3_reference_semantics.py
         - scripts/validate_gate5_entry_design_review.py
-        - scripts/validate_market_signal_scan_coverage.py
         - scripts/validate_public_surface_coherence.py
         - scripts/validate_target_v2_contract_revision.py
 
@@ -168,24 +166,11 @@ path_classification:
       public_exceptions:
         - tests/conftest.py
         - tests/fixtures/
-        - tests/test_agent_prepared_action_example.py
-        - tests/test_arc_market_signal_watch.py
-        - tests/test_classification_determinism.py
         - tests/test_decision_intake_scenarios.py
-        - tests/test_deep_scenario_authority_boundary.py
         - tests/test_doctrine_lint.py
-        - tests/test_gate3_field_derivation_design.py
         - tests/test_gate5_entry_design_review.py
-        - tests/test_market_signal_scan_coverage.py
-        - tests/test_model_provider_independence.py
-        - tests/test_proof_reproducibility.py
-        - tests/test_public_api_documentation_boundary.py
-        - tests/test_public_discovery_boundary.py
         - tests/test_public_surface_coherence.py
-        - tests/test_public_x402_containment.py
         - tests/test_review_context_contract_v2_spec.py
-        - tests/test_target_v2_contract_revision.py
-        - tests/test_workspace_continuity_docs.py
 
   PUBLIC:
     exact_paths:
@@ -249,12 +234,13 @@ public_projection_sanitization:
   public_repository_dependency_for_observed_active_production_runtime: false
   public_contract_validation_rerun: passed_repository_verified
   private_implementation_validation_rerun: passed_repository_verified
-  private_target_files_removed_from_current_projection: 0
+  private_target_current_tree_removal_candidate_prepared: true
+  retired_NSF_program_material_removed_from_candidate_tree: true
   public_contracts_removed: 0
   public_CI_weakened: false
-  deletion_bearing_sanitization_started: false
-  sanitization_complete: false
-  blocker: explicit_Architect_deletion_authority_required
+  deletion_bearing_sanitization_started: true
+  sanitization_complete: false_pending_exact_head_CI_and_merge
+  blocker: none_for_repository_sanitization
 ```
 
 ## Required unblocking evidence
@@ -271,7 +257,7 @@ Before a deletion-bearing sanitization commit:
 8. re-run the full public contract validation suite after cutover — **repository-verified complete**;
 9. re-run the private implementation validation suite after cutover — **repository-verified complete**;
 10. reconcile the transition artifacts to the post-cutover state and complete CCO review — **verified complete in the private Legacy continuity completion receipt**;
-11. obtain explicit Architect authority before any deletion-bearing public sanitization — **not yet granted; this remains the sole removal gate**.
+11. obtain explicit Architect authority before any deletion-bearing public sanitization — **granted September 18, 2026 for repository sanitization only; production-affecting action remains excluded**.
 
 Evidence submission is not independent verification. Repository validation does
 not authorize payment or settlement change, retail RP8B completion,

@@ -14,7 +14,6 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = (
     "CURRENT_STATE.md",
     "docs/legacy-v1/README.md",
-    "docs/legacy-v1/quickstart.md",
     "docs/legacy-v1/reports/PROJECT_REPORT-2026-03-20.md",
     "docs/target-v2/README.md",
     "docs/go-to-market/system-class-comparator.md",
@@ -50,7 +49,6 @@ FIRST_SCREEN_PROHIBITED = (
 CURRENT_SURFACES = (
     "CURRENT_STATE.md",
     "README.md",
-    "PROJECT_REPORT.md",
     "docs/start-here.md",
     "docs/target-v2/README.md",
     "docs/operations/production-readiness-register.md",
@@ -165,7 +163,6 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
 
     readme = _read(root, "README.md", errors)
     current = _read(root, "CURRENT_STATE.md", errors)
-    project_report = _read(root, "PROJECT_REPORT.md", errors)
     historical = _read(
         root,
         "docs/legacy-v1/reports/PROJECT_REPORT-2026-03-20.md",
@@ -213,13 +210,7 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
         normalized = term.lower().replace("_", " ")
         _require(errors, normalized not in first_screen, f"root_README.first_screen_terminology.{term}", f"prohibited term appears in first 100 lines: {term}")
 
-    # Root compatibility report and historical archive.
-    _require(errors, "retained for compatibility" in project_report, "root_PROJECT_REPORT.superseded_pointer_present", "compatibility/supersession pointer is missing")
-    _require(errors, "docs/legacy-v1/reports/PROJECT_REPORT-2026-03-20.md" in project_report, "root_PROJECT_REPORT.historical_report_link_present", "historical report link is missing")
-    _require(errors, "CURRENT_STATE.md" in project_report, "root_PROJECT_REPORT.current_state_link_present", "current-state link is missing")
-    _require(errors, re.search(r"(?im)^\*\*Status:\*\*\s*GTM[- ]Ready", project_report) is None, "root_PROJECT_REPORT.current_GTM_ready_claim_absent", "current GTM-Ready status claim is present")
-    _require(errors, re.search(r"(?i)\b(?:system|API)\s+is\s+\*\*?operationally live", project_report) is None, "root_PROJECT_REPORT.current_operationally_live_claim_absent", "current operationally-live claim is present")
-
+    # Historical Legacy report remains explicitly bounded.
     first_40_historical = "\n".join(historical.splitlines()[:40])
     _require(errors, "Superseded current-state notice" in first_40_historical, "historical_report.supersession_banner_in_first_40_lines", "supersession banner is missing from first 40 lines")
     _require(errors, "March 20, 2026" in first_40_historical, "historical_report.historical_date_present", "historical evidence date is missing")
@@ -313,15 +304,25 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
     _check_links(root, "CURRENT_STATE.md", current, errors)
     ten_minute = reviewer_paths.split("## Ten-Minute Path", 1)[-1].split("\n---", 1)[0]
     expected_order = (
-        "README.md",
-        "CURRENT_STATE.md",
-        "docs/go-to-market/first-use-case-agent-prepared-treasury-action.md",
-        "docs/target-v2/README.md",
-        "docs/operations/production-readiness-register.md",
+        "[README](../README.md)",
+        "[Current State](../CURRENT_STATE.md)",
+        "[First bounded treasury workflow](go-to-market/first-use-case-agent-prepared-treasury-action.md)",
+        "[Target v2](target-v2/README.md)",
+        "[Production Readiness](operations/production-readiness-register.md)",
     )
     positions = [ten_minute.find(item) for item in expected_order]
-    numbered_start = "1. `README.md`\n2. `CURRENT_STATE.md`"
+    numbered_start = "1. [README](../README.md)\n2. [Current State](../CURRENT_STATE.md)"
     _require(errors, numbered_start in ten_minute and all(position >= 0 for position in positions) and positions == sorted(positions), "reviewer_paths.default_path_starts_with_CURRENT_STATE", "ten-minute path must move from README directly to CURRENT_STATE before workflow and readiness detail")
+
+    # Sanitized public projection: implementation/state machinery must not re-enter.
+    prohibited_current_paths = (
+        "app.py", "core", "retail_context", "nova_api", "deployment",
+        "agent_files", "chronology", "config", "reports",
+        "docs/grants/nsf-seed-fund", "demos/nsf-review-ready-before-execution",
+    )
+    for relative in prohibited_current_paths:
+        _require(errors, not (root / relative).exists(), f"sanitized_projection.absent.{relative}", f"private or retired path re-entered current public tree: {relative}")
+    _require(errors, "## NSF Reviewer Path" not in reviewer_paths, "reviewer_paths.retired_NSF_path_absent", "retired NSF reviewer path remains active")
 
     return errors
 

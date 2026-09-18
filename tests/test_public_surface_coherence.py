@@ -11,12 +11,10 @@ from scripts.validate_public_surface_coherence import REPO_ROOT, validate_reposi
 FIXTURE_FILES = (
     "README.md",
     "CURRENT_STATE.md",
-    "PROJECT_REPORT.md",
     "docs/start-here.md",
     "docs/reviewer-paths.md",
     "docs/inspection/phase-1-inspection-status.md",
     "docs/legacy-v1/README.md",
-    "docs/legacy-v1/quickstart.md",
     "docs/legacy-v1/reports/PROJECT_REPORT-2026-03-20.md",
     "docs/target-v2/README.md",
     "docs/go-to-market/system-class-comparator.md",
@@ -72,24 +70,6 @@ def test_root_readme_deep_jargon_in_first_screen_fails(coherent_repo: Path) -> N
     path = coherent_repo / "README.md"
     path.write_text("constraint_pressure\n" + path.read_text(encoding="utf-8"), encoding="utf-8")
     assert "root_README.first_screen_terminology.constraint_pressure" in _fields(coherent_repo)
-
-
-def test_root_project_report_gtm_ready_claim_fails(coherent_repo: Path) -> None:
-    path = coherent_repo / "PROJECT_REPORT.md"
-    path.write_text(
-        path.read_text(encoding="utf-8") + "\n**Status:** GTM-Ready\n",
-        encoding="utf-8",
-    )
-    assert "root_PROJECT_REPORT.current_GTM_ready_claim_absent" in _fields(coherent_repo)
-
-
-def test_root_project_report_operationally_live_claim_fails(coherent_repo: Path) -> None:
-    path = coherent_repo / "PROJECT_REPORT.md"
-    path.write_text(
-        path.read_text(encoding="utf-8") + "\nThe API is **operationally live**.\n",
-        encoding="utf-8",
-    )
-    assert "root_PROJECT_REPORT.current_operationally_live_claim_absent" in _fields(coherent_repo)
 
 
 def test_historical_report_without_banner_fails(coherent_repo: Path) -> None:
@@ -224,7 +204,7 @@ def test_default_reviewer_path_wrong_order_fails(coherent_repo: Path) -> None:
     _replace(
         coherent_repo,
         "docs/reviewer-paths.md",
-        "1. `README.md`\n2. `CURRENT_STATE.md`",
-        "1. `CURRENT_STATE.md`\n2. `README.md`",
+        "1. [README](../README.md)\n2. [Current State](../CURRENT_STATE.md)",
+        "1. [Current State](../CURRENT_STATE.md)\n2. [README](../README.md)",
     )
     assert "reviewer_paths.default_path_starts_with_CURRENT_STATE" in _fields(coherent_repo)

@@ -1,8 +1,8 @@
 # Public Repository Hygiene Plan v0.1
 
-**Status:** bounded Pass 2 classification; no deletion authority  
-**Repository:** `nova-infrastructure-systems/sharpe-nova-os`  
-**Baseline:** public `main` after PR #66  
+**Status:** Pass 2 classification executed under explicit Architect deletion authority on September 18, 2026
+**Repository:** `nova-infrastructure-systems/sharpe-nova-os`
+**Baseline:** public `main` after PR #66
 **Purpose:** reduce public-surface noise without erasing provenance or weakening the public/private boundary
 
 ## Governing principle
@@ -17,8 +17,9 @@ The public repository should look like an intentional external trust and
 integration surface. Historical engineering residue may remain in Git history
 without remaining prominent in the current tree.
 
-This plan is classification only. It does not authorize moving or deleting a
-current public path.
+The original plan was classification only. The Architect subsequently authorized
+deletion-bearing public sanitization on September 18, 2026, with production-affecting
+actions explicitly excluded. Git history remains the provenance record for removed paths.
 
 ## Root disposition
 
@@ -117,8 +118,8 @@ public sanitization and remains blocked pending explicit Architect authority.
 ### Pull requests
 
 PR #8, the July NSF hardening draft, is closed unmerged as superseded by the
-current public/private architecture. Its branch/history is preserved. Any future
-NSF work should start from current `main`.
+current public/private architecture. Its branch/history is preserved. The Architect has ended pursuit of the NSF path. The NSF package and demo are removed
+from the current public tree; Git history preserves their provenance.
 
 ### Issues
 
@@ -189,6 +190,6 @@ current_hygiene_state:
   root_classification_complete: true
   stabilization_observation: verified_complete
   CCO_completion_review: satisfied
-  deletion_bearing_sanitization_authorized: false
-  deletion_bearing_sanitization_started: false
+  deletion_bearing_sanitization_authorized: true
+  deletion_bearing_sanitization_started: true
 ```

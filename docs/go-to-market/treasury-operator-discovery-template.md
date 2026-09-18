@@ -158,9 +158,7 @@ research_status:
 
 Use this optional, clearly separated module when the recurring treasury action
 includes an agent discovering, requesting, or relying on a paid machine
-resource. The questions test a specification-level hypothesis derived in part
-from market signal
-[`MSE-2026-07-30-028`](../market/signals/2026/MSE-2026-07-30-028-fastly-x402-edge-payment.md).
+resource. The questions test a specification-level hypothesis derived in part from a historical market-signal observation preserved in Git history.
 Fastly is an example provider, not a Nova dependency. Answers are operator
 research, not accepted product requirements.
 

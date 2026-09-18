@@ -28,8 +28,7 @@ commercial value, and category coherence.
 
 It does not authorize implementation.
 
-Circle is one example channel referenced by market signal
-[`MSE-2026-07-30-029`](../market/signals/2026/MSE-2026-07-30-029-circle-agent-marketplace.md).
+Circle is one example channel previously captured in a historical market-signal record preserved in Git history.
 The specification is provider-neutral and applies to agent marketplaces, API
 directories, MCP catalogs, service registries, wallet discovery systems,
 gateway catalogs, and future machine-service distribution venues.

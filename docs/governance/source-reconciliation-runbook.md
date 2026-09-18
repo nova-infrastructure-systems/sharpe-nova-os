@@ -101,7 +101,7 @@ git branch --show-current
 git rev-parse --short HEAD
 git log --oneline --decorate -n 10
 
-grep -RInE "admissibility|allow|allows|approve|denies|authorize|block|permit|routes|settles|executes" START_HERE.md docs/start-here.md README.md docs/governance
+grep -RInE "admissibility|allow|allows|approve|denies|authorize|block|permit|routes|settles|executes" docs/start-here.md README.md docs/governance
 ```
 
 If `rg` is available, `rg -n` may be used instead of `grep -RInE`.
@@ -172,7 +172,7 @@ Agents should escalate source conflicts to CCO when:
 * connector-visible public surfaces contain authority-adjacent language that conflicts with current CCO-known state
 * local and origin head cannot be confirmed
 * a current confirmed public surface contains unqualified approval, denial, authorization, blocking, routing, settlement, execution, payment, compliance, audit, trading, or portfolio-optimization language
-* a source conflict affects NSF, grant, public repo, proof-chain, or content-publication claims
+* a source conflict affects grant, public repo, proof-chain, or content-publication claims
 * source-incomplete runs repeat without reconciliation
 
 Agents should not repeatedly escalate the same stale connector artifact after CCO reconciliation unless:

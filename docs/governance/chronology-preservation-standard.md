@@ -184,7 +184,7 @@ Allowed layer examples:
 - archive
 - content_engine
 - market_signal
-- nsf_grant
+- external_grant
 - public_framing
 - api_context
 - controlled_discoverability
@@ -270,7 +270,7 @@ Examples include:
 - CCO reconciliations
 - content engine operating-rule changes
 - market-signal events with Nova relevance
-- NSF / grant-facing posture changes
+- grant-facing posture changes
 - public framing changes
 - source conflicts
 - stale connector artifacts
@@ -359,7 +359,7 @@ chronology_entry_filter:
     - records_stale_connector_artifact
     - records_continuity_gap
     - affects_public_framing
-    - affects_nsf_grant_or_institutional_review_posture
+    - affects_external_grant_or_institutional_review_posture
     - affects_content_engine_operating_rules
     - affects_archive_state
     - affects_reflex_memory_governance
