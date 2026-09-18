@@ -1,7 +1,7 @@
 # Sharpe Nova OS — Current State
 
-**Effective date:** August 25, 2026  
-**Reconciliation date:** August 28, 2026  
+**Effective date:** September 18, 2026  
+**Reconciliation date:** September 18, 2026  
 **Authority:** Architect  
 **Coherence review:** Jarvis-Nova CCO  
 **Repository role:** governed public current-state projection  
@@ -25,6 +25,54 @@ Local authority decides.
 External systems execute.
 Nova does not execute.
 ```
+
+## Public projection update — September 18, 2026
+
+The public projection now distinguishes Nova's bounded **retail agent plane**
+from the separate **institutional target-v2 plane**.
+
+```yaml
+public_projection_current_state:
+  retail_agent_plane:
+    public_machine_commerce_surface: live
+    network: Base_mainnet
+    payment_asset: USDC
+    payment_protocol: x402_v2
+    public_resources: 4
+    authority_effect: none
+    approval_effect: none
+    execution_effect: none
+    access_effect: context_resource_access_only
+
+  institutional_plane:
+    canonical_direction: target_v2_non_authority_review_context
+    target_v2_runtime_implemented: false
+    target_v2_production_active: false
+    institutional_pilot_started: false
+    system_wide_production_readiness: not_established
+
+  authority_boundary:
+    local_authority_decides: true
+    external_systems_execute: true
+    Nova_executes: false
+```
+
+The retail public service does not create institutional identity, workflow
+authorization, institutional production activation, or capital authority.
+Payment buys bounded context access only.
+
+The four public resources are:
+
+| Resource | Price | Job |
+|---|---:|---|
+| State Ping | 0.002 USDC | What context exists? |
+| Context Delta | 0.02 USDC | What materially changed? |
+| Governed Review Context | 0.10 USDC | What review context belongs around this exact proposed action? |
+| Decision Context Packet | 1.00 USDC | What portable integrity-bound review artifact should local authority receive? |
+
+The permanent capital boundary remains:
+
+> **NO SECOND PAYMENT without separate explicit capital authorization.**
 
 ## Repository architecture transition
 
@@ -154,6 +202,17 @@ current_product_state:
   canonical_corporate_accepted_state_source: nova-infrastructure-systems/nova-core
   canonical_direction: target_v2_non_authority_review_context
 
+  retail_agent_plane:
+    public_service_live: true
+    network: Base_mainnet
+    payment_asset: USDC
+    payment_protocol: x402_v2
+    four_public_resources_live: true
+    authority_effect: none
+    approval_effect: none
+    execution_effect: none
+    access_effect: context_resource_access_only
+
   Legacy_v1:
     implemented: true
     canonical_future_external_model: false
@@ -249,15 +308,31 @@ current_product_state:
     adoption: not_established
 
   commercialization:
-    Legacy_v1_metering_code_present: true
-    current_pricing_authority: none
-    public_marketplace_activation: false
-    x402_activation: false
+    retail_agent_plane:
+      public_service_live: true
+      Base_USDC_x402_v2_live: true
+      fixed_resource_pricing_live: true
+      Marketplace_submission_sent: true
+      Marketplace_listing_independently_verified: false
+      Marketplace_discovery_established: false
+    institutional_plane:
+      marketplace_activation: false
+      x402_as_identity_or_authority: false
+      production_activation: false
+      capital_authority: false
+    buyer_demand_established: false
+    recurring_paid_usage_established: false
+    product_market_fit_established: false
 ```
 
 ## What exists today
 
 The repository and current evidence establish:
+
+* a separately bounded live retail machine-commerce surface on Base mainnet using USDC and x402 v2;
+* four independently priced public context resources: State Ping, Context Delta, Governed Review Context, and Decision Context Packet;
+* explicit `authority_effect: none`, `approval_effect: none`, and `execution_effect: none` across those resources;
+* payment isolation: access to one resource does not authorize purchase of another;
 
 * the implemented Legacy v1 runtime;
 * the approved non-authority target v2 contract;
@@ -318,16 +393,21 @@ The available evidence does not establish:
 * adoption;
 * product-market fit;
 * pricing power;
-* production x402 or settlement activation;
+* institutional x402 as identity, workflow authorization, approval, or capital authority;
+* live Arc production support;
+* live Circle Gateway verification or settlement through Nova;
 * authority to move, approve, sign, or settle capital.
 
 ## Current implementation priority
 
 The accepted-state authority transfer and post-cutover repository validation are
-complete. The remaining repository-transition work is stabilization, projection
-hygiene reconciliation, CCO completion review, and bounded sanitization review.
-Public deletion-bearing sanitization remains blocked until stabilization and CCO
-review are complete and the Architect separately authorizes removal.
+complete. The current public-repository priority is projection hygiene:
+presenting the externally supportable Nova category, retail public-service state,
+and institutional non-authority boundary without exposing private production
+machinery or corporate accepted state.
+
+This projection update does not authorize deletion of retained public history or
+runtime artifacts. Any deletion-bearing hygiene remains a separate review.
 
 Gate 5 remains not started and has no implementation or production-activation
 authority.
