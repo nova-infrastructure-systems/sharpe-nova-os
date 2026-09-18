@@ -17,6 +17,14 @@ External systems execute.
 Nova does not execute.
 ```
 
+`Local authority` is a role in the architecture, not a requirement that a human
+must always occupy that role. The institution may place a human, committee,
+institution-owned policy process, or separately authorized machine process in
+that position.
+
+Nova does not decide who holds that authority and does not inherit it by being
+required in the workflow.
+
 ## The shift
 
 Capital workflows are becoming increasingly machine-prepared and
