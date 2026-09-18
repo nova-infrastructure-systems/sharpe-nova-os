@@ -1,6 +1,6 @@
 # Public Projection Sanitization Execution v0.1
 
-**Status:** deletion-bearing public sanitization authorized by the Architect on September 18, 2026; execution in progress on a non-production repository branch
+**Status:** deletion-bearing public sanitization complete on public `main`; exact-head CI and merge verified
 **Baseline repository:** `nova-infrastructure-systems/sharpe-nova-os`
 **Baseline branch:** `main`
 **Baseline SHA:** `eeba729534088bdec705e84219188bb5aaaa14eb`
@@ -62,7 +62,7 @@ deployment_reconciliation:
   production_continuity_preserved: true
   public_contract_validation_rerun: passed_repository_verified
   private_implementation_validation_rerun: passed_repository_verified
-  removal_gate: BLOCKED_PENDING_EXPLICIT_ARCHITECT_DELETION_AUTHORITY
+  removal_gate: SATISFIED_REPOSITORY_SANITIZATION_COMPLETE
 ```
 
 The rollback exercise established that a provider `Live` state and healthy
@@ -105,10 +105,12 @@ deletion_bearing_public_sanitization:
   safe_to_execute_now: true_repository_only_no_production_effect
 ```
 
-Repository cleanup that does not delete or remove current public paths may
-continue. Moving or removing files from the current public tree remains
-deletion-bearing sanitization and requires a separate explicit Architect
-authorization.
+The authorized deletion-bearing sanitization was executed through PR #68. The
+exact candidate head `a85d1e72235efaeed59fcf69621216a7d4c5c856` passed Public
+Projection CI run #1 and merged to public `main` as
+`738988184d5dcf545c66362ae402e0b604f8cf21`. This authority was consumed by
+that bounded repository operation and does not create standing authority for
+future deletion or production change.
 
 ## Exact classification rules
 
@@ -234,13 +236,17 @@ public_projection_sanitization:
   public_repository_dependency_for_observed_active_production_runtime: false
   public_contract_validation_rerun: passed_repository_verified
   private_implementation_validation_rerun: passed_repository_verified
-  private_target_current_tree_removal_candidate_prepared: true
-  retired_NSF_program_material_removed_from_candidate_tree: true
+  private_target_current_tree_removal_complete: true
+  retired_NSF_program_material_removed_from_current_tree: true
   public_contracts_removed: 0
   public_CI_weakened: false
+  exact_head: a85d1e72235efaeed59fcf69621216a7d4c5c856
+  exact_head_CI_run: 1
+  exact_head_CI_result: PASS
+  merge_commit: 738988184d5dcf545c66362ae402e0b604f8cf21
   deletion_bearing_sanitization_started: true
-  sanitization_complete: false_pending_exact_head_CI_and_merge
-  blocker: none_for_repository_sanitization
+  sanitization_complete: true
+  blocker: none
 ```
 
 ## Required unblocking evidence
