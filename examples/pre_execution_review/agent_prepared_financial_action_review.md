@@ -2,15 +2,15 @@
 
 ## Status
 
-Public example  
-Non-authority pre-execution review example  
-Not product doctrine  
-Not execution logic  
-Not NSF language  
-Not public GTM language  
-Not code  
-Not market validation  
-Not benchmark evidence  
+Public example
+Non-authority pre-execution review example
+Not product doctrine
+Not execution logic
+Not grant-program language
+Not public GTM language
+Not code
+Not market validation
+Not benchmark evidence
 
 ---
 

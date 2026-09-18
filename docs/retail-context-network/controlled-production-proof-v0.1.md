@@ -72,7 +72,7 @@ distributed or multi-instance behavior.
 
 All application settings are retail-owned `NOVA_RETAIL_*` variables. The
 deployment-capable blueprint is
-`deployment/render-retail-controlled-proof.yaml`; auto-deploy is disabled and
+the private production deployment configuration; auto-deploy is disabled and
 the Legacy service artifact is unchanged. Its command is equivalent to:
 
 ```text

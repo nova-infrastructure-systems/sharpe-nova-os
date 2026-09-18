@@ -13,8 +13,7 @@ status:
 ```
 
 This specification extracts a provider-independent architectural question from
-the Fastly market-signal
-[`MSE-2026-07-30-028`](../market/signals/2026/MSE-2026-07-30-028-fastly-x402-edge-payment.md).
+a historical Fastly market-signal record preserved in Git history.
 Fastly is one evidence source, not a Nova dependency. Evidence shows that
 machine payment and resource delivery can be compressed; the institutional
 need described here remains an unvalidated hypothesis.

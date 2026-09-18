@@ -100,8 +100,7 @@ Nova does not:
 
 The following file or artifact names should be reviewed after grant submission for possible renaming, quarantine, or stronger archival labeling because they may create authority or payment-adjacent interpretation risk:
 
-- `core/x402_middleware.py`
-- `core/cdp_auth.py`
+- historical `core/x402_middleware.py` and `core/cdp_auth.py` implementation paths (available in Git history; canonical implementation is private)
 - `scripts/live_x402_constraint_pressure_payment.py`
 - `specs/decision_admission_contract.json`
 - `specs/decision_admission_rules.json`

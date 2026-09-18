@@ -152,10 +152,12 @@ Start with:
 6. [Target v2](docs/target-v2/README.md)
 7. [Production Readiness Register](docs/operations/production-readiness-register.md)
 
-For historical implementation and migration inspection:
+For historical product-generation and migration inspection:
 
 - [Legacy v1](docs/legacy-v1/README.md)
-- [Legacy v1 local inspection](docs/legacy-v1/quickstart.md)
+
+The public repository no longer carries the canonical Legacy v1 runtime implementation.
+Historical implementation provenance remains in Git history; current production machinery is private.
 
 ## Public / private boundary
 

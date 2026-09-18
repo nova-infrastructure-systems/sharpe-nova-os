@@ -12,16 +12,16 @@ Legacy_v1:
   production_custody: unattested
 ```
 
-Legacy v1 is the implemented decision-admission and environmental-context
-runtime preserved in this repository.
+Legacy v1 is the historical implemented decision-admission and environmental-context
+product generation. Its canonical runtime implementation is no longer retained in
+this public projection.
 
-It is retained for:
+The public repository retains only the bounded historical documentation needed for:
 
 * historical integrity;
-* dependency inventory;
-* migration analysis;
-* existing test and proof inspection;
-* controlled internal review.
+* migration interpretation;
+* contract comparison;
+* public provenance.
 
 Legacy v1 is not the canonical future Sharpe Nova OS external contract.
 
@@ -42,7 +42,6 @@ Legacy v1 implementation evidence does not establish:
 
 ## References
 
-* [Legacy v1 quickstart](quickstart.md)
 * [Historical March 2026 project report](reports/PROJECT_REPORT-2026-03-20.md)
 * [Current Sharpe Nova OS state](../../CURRENT_STATE.md)
 * [Target v2](../target-v2/README.md)

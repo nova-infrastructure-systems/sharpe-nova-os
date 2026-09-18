@@ -316,4 +316,4 @@ If used, Base serves as an anchoring/settlement layer and does not replace appli
 
 For API key provisioning, onboarding, or operational questions, contact the Nova operations team.
 
-For technical issues, review the [README.md](README.md) quickstart or enable debug logging via `LOG_LEVEL=debug`.
+For historical product-generation context, review the [Legacy v1 README](../README.md).

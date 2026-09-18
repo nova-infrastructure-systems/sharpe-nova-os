@@ -62,7 +62,7 @@ Public files must not expose production topology, secret values, institutional t
 13. Marketplace submission must not be presented as listing approval or discoverability.
 14. Public repository content must not be presented as the complete production implementation after the private/public split is accepted.
 15. Public `CURRENT_STATE.md` must be labeled as a governed public projection, not authoritative corporate accepted state.
-16. Public `agent_files/state/accepted-state-registry.yaml` must be treated as historical governed projection only after transfer activation.
+16. The former public `agent_files/state/accepted-state-registry.yaml` is historical governed projection only and is no longer retained in the current public tree after authorized sanitization.
 17. Public compatibility code must fail closed against current accepted-state claims and must not silently substitute public `origin/main`, a checkout, or a mirror for the private canonical registry.
 18. Unavailability of the private canonical registry from the public repository must not create chronology, accepted-state, Reflex Memory, implementation, deployment, or capital authority.
 

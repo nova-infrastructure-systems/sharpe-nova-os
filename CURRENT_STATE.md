@@ -74,6 +74,28 @@ The permanent capital boundary remains:
 
 > **NO SECOND PAYMENT without separate explicit capital authorization.**
 
+
+## Public projection sanitization — September 18, 2026
+
+The Architect separately authorized deletion-bearing sanitization of this public
+repository after private-source continuity, stabilization observation, and CCO
+completion review were satisfied. That authority is repository-scoped only.
+
+```yaml
+public_projection_sanitization:
+  Architect_authorized: true
+  authorized_at: 2026-09-18
+  scope: public_repository_current_tree_only
+  production_change_authorized: false
+  deployment_authorized: false
+  payment_or_settlement_authorized: false
+  capital_movement_authorized: false
+  retired_grant_program_material_current_tree_retention: false
+```
+
+Removed paths remain available through Git history. The canonical production
+implementation and corporate accepted state remain private.
+
 ## Repository architecture transition
 
 ```yaml
@@ -429,7 +451,7 @@ current_readiness_priority:
       - historical_retention_not_proven_complete
 
   repository_transition:
-    status: authority_transfer_complete_repository_validation_complete_stabilization_in_progress
+    status: authority_transfer_complete_repository_validation_complete_stabilization_complete
     accepted_state_authority: nova-infrastructure-systems/nova-core
     public_repository_role: NON_AUTHORITATIVE_GOVERNED_PROJECTION
     provider_continuity_evidence: evidence_submitted

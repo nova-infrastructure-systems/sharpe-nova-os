@@ -251,7 +251,7 @@ python3 scripts/doctrine_lint.py
 Optional high-risk-language scan:
 
 ```bash
-grep -RInE "approves|denies|authorizes|blocks|routes|settles|executes|signs|manages wallets|compliance product|audit system|agent supervisor|capital-governance brain|powers live API decisions|learns from capital actions|production-ready|buyer-validated|market-validated" README.md START_HERE.md docs .github || true
+grep -RInE "approves|denies|authorizes|blocks|routes|settles|executes|signs|manages wallets|compliance product|audit system|agent supervisor|capital-governance brain|powers live API decisions|learns from capital actions|production-ready|buyer-validated|market-validated" README.md docs .github || true
 ```
 
 Confirm:
