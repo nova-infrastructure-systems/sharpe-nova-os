@@ -10,6 +10,11 @@ Purpose: preserve Sharpe Nova OS public legibility while protecting internal ope
 Public repo shows the proof surface.  
 Private OS preserves the operating memory.
 
+Publication requires affirmative external value. The absence of an obvious
+secret is not sufficient reason to publish. If the publication value is unclear
+or private risk is material, default to private and expose only the minimum
+contract, schema, synthetic proof, or sanitized explanation required.
+
 ## Public Repo Purpose
 
 The public repo exists to show that Sharpe Nova OS is a coherent, bounded, non-authority pre-execution governance review layer.
@@ -113,3 +118,13 @@ Controlled strategy hypotheses may be preserved in the public repo only when the
 See:
 
 - `docs/strategy/coherence-infrastructure-value-hypothesis.md`
+
+## Permanent publication control
+
+Jarvis-Nova CCO owns the coherence control for material public exposure and
+claim-scope changes. The Architect retains final authority.
+
+See:
+
+- `docs/governance/publication-governance-standard-v1.0.md`
+- `docs/governance/publication-governance-policy-v1.yaml`

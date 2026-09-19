@@ -117,6 +117,26 @@ commercialization_checks:
   - Does payment get mistaken for demand, adoption, or authority?
 ```
 
+## Permanent Publication Gate
+
+Before exposure classification, confirm that publication has affirmative external
+value. At least one must be true:
+
+- category comprehension
+- interoperability
+- verification
+- external trust
+
+Passing the private-risk check is not enough by itself. If the external value is
+unclear, default to `PRIVATE`. If a public contract, schema, synthetic proof, or
+sanitized explanation is sufficient, publish that minimum surface instead of the
+private implementation or operating evidence.
+
+Control reference:
+
+- `docs/governance/publication-governance-standard-v1.0.md`
+- `docs/governance/publication-governance-policy-v1.yaml`
+
 ## Exposure Classification
 
 Classify the artifact before publishing:

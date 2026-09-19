@@ -37,9 +37,10 @@ Every new or materially revised file must be classified before merge.
 
 Select one:
 
-- [ ] Public
-- [ ] Controlled public
-- [ ] Private or not public by default
+- [ ] `PUBLIC`
+- [ ] `PUBLIC_SANITIZED`
+- [ ] `PRIVATE`
+- [ ] `PROVIDER_ONLY`
 - [ ] Not applicable
 
 If public or controlled public, explain why it belongs in the public repo:
@@ -58,6 +59,23 @@ Reference:
 
 - `docs/governance/public-repo-visibility-standard.md`
 - `docs/governance/public-file-review-checklist.md`
+- `docs/governance/publication-governance-standard-v1.0.md`
+
+### Publication Value Gate
+
+At least one affirmative external value is required for a material public change:
+
+- [ ] Category comprehension
+- [ ] Interoperability
+- [ ] Verification
+- [ ] External trust
+- [ ] Not applicable; no material public artifact is added or revised.
+
+Confirm:
+
+- [ ] Absence of an obvious secret is not being used as the reason to publish.
+- [ ] If publication value is unclear, the artifact defaults to `PRIVATE`.
+- [ ] If a bounded contract/schema/synthetic proof/sanitized explanation is enough, private implementation or operating evidence is not published.
 
 ---
 

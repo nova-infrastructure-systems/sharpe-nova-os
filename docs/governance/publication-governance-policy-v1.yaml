@@ -1,0 +1,72 @@
+schema_version: 1.0.0
+policy_id: sharpe_nova_publication_governance_v1
+status: active
+repository_role: NON_AUTHORITATIVE_GOVERNED_PROJECTION
+authority: Architect
+control_owner: Jarvis-Nova_CCO
+decision_authority: Architect
+default_disposition: PRIVATE
+
+publication_gate:
+  external_value_require_one:
+    - category_comprehension
+    - interoperability
+    - verification
+    - external_trust
+  private_risk_require_none_material:
+    - proprietary_derivation
+    - production_topology
+    - operating_evidence
+    - corporate_accepted_state
+    - institutional_private_state
+    - security_sensitive_implementation
+    - provider_only_secret
+
+exposure_classes:
+  - PUBLIC
+  - PUBLIC_SANITIZED
+  - PRIVATE
+  - PROVIDER_ONLY
+
+cco_review_required_for:
+  public_entry_paths:
+    - README.md
+    - CURRENT_STATE.md
+    - CATEGORY.md
+    - SYSTEM_IDENTITY.md
+  semantic_domains:
+    - authority
+    - approval
+    - execution
+    - production
+    - readiness
+    - pricing
+    - payment
+    - x402
+    - marketplace
+    - institutional_identity
+    - tenancy
+    - chronology
+    - Reflex_Memory
+    - public_API_or_resource_contract
+    - schema_or_proof_semantics
+    - commercialization
+    - adoption_or_buyer_claims
+    - public_private_exposure
+  security_exposure:
+    - provider_topology
+    - operational_controls
+    - recovery_mechanics
+    - credential_or_secret_boundary
+
+cco_non_authorities:
+  - corporate_accepted_state_mutation
+  - chronology_acceptance
+  - Reflex_Memory_mutation
+  - production_deployment_authority
+  - credential_custody
+  - payment_or_settlement_authority
+  - capital_authority
+  - legal_or_compliance_determination
+  - institutional_policy
+  - final_Architect_authority
