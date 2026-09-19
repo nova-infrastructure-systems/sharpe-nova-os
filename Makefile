@@ -9,6 +9,7 @@ PYTHON ?= .venv/bin/python
 	verify-target-v2-contract \
 	verify-gate5-entry-design \
 	verify-public-surface \
+	verify-publication-governance \
 	verify-tests \
 	verify-whitespace \
 	test
@@ -26,6 +27,7 @@ verify: \
 	verify-target-v2-contract \
 	verify-gate5-entry-design \
 	verify-public-surface \
+	verify-publication-governance \
 	verify-tests \
 	verify-whitespace
 
@@ -48,6 +50,9 @@ verify-gate5-entry-design: require-venv
 
 verify-public-surface: require-venv
 	$(PYTHON) scripts/validate_public_surface_coherence.py
+
+verify-publication-governance: require-venv
+	$(PYTHON) scripts/validate_publication_governance.py
 
 verify-tests: require-venv
 	$(PYTHON) -m pytest

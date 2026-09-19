@@ -160,6 +160,21 @@ This does not authorize:
 
 Therefore public-surface validation must distinguish retail commercialization authority from institutional authority rather than treating x402 or marketplace activity as globally prohibited.
 
+## Ongoing publication control
+
+The completed repository split does not create a transparency default. New or
+materially revised public artifacts require affirmative external value in category
+comprehension, interoperability, verification, or external trust. The absence of
+an obvious secret is not sufficient reason to publish.
+
+If publication value is unclear, or private risk is materially present, default to private and expose only the minimum bounded public contract or proof required.
+
+Jarvis-Nova CCO owns coherence review under:
+
+- `docs/governance/publication-governance-standard-v1.0.md`
+
+The Architect retains final authority.
+
 ## Publication test
 
 Before publishing a file, ask:
