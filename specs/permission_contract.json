@@ -1,4 +1,11 @@
 {
+  "_identity_classification": {
+    "scope": "Legacy_v1_compatibility_only",
+    "canonical_current_identity": false,
+    "new_external_integrations_permitted": false,
+    "authority_model_applies_only_to": "Legacy_v1_implemented_behavior",
+    "current_identity_reference": "SYSTEM_IDENTITY.md"
+  },
   "name": "permission_contract",
   "version": "1.0",
   "contract_scope": "pre_execution_decision_admissibility",
