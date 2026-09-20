@@ -1,0 +1,35 @@
+schema_version: "1.0.0"
+control_id: legacy_v1_semantic_quarantine_v1
+status: active_identity_preservation_control
+control_owner: Jarvis-Nova_CCO
+decision_authority: Architect
+purpose: >-
+  Preserve Legacy v1 implementation and historical semantics without allowing
+  those authority-bearing semantics to regain canonical current status.
+
+markdown_compatibility_artifacts:
+  - docs/non_bypass_policy.md
+  - docs/field_hierarchy.md
+  - docs/governance_rollout.md
+  - docs/continuous_integration_loop.md
+  - docs/NOVA_GOVERNANCE_ROLLOUT_POLICY_v1_0.md
+  - docs/mcp_tool_integration.md
+
+structured_compatibility_artifacts:
+  - specs/constraint_policy.json
+  - specs/permission_contract.json
+  - specs/constraint_interface.json
+  - specs/decision_admission_contract.json
+
+required_classification: Legacy_v1_compatibility_only
+canonical_current_identity: false
+new_external_integrations_permitted: false
+current_identity_reference: SYSTEM_IDENTITY.md
+identity_kernel_reference:
+  private: governance/identity/nova-identity-kernel-v1.yaml
+  public: docs/governance/nova-identity-kernel-v1.yaml
+
+rule: >-
+  Legacy authority-bearing semantics may remain inspectable for implementation,
+  replay, migration, and historical traceability, but they must not be used as
+  canonical current Nova identity or as semantic authority for new integrations.
