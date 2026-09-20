@@ -66,6 +66,7 @@ def validate() -> list[str]:
     category_doc = _text("CATEGORY.md")
     standard = _text("docs/governance/nova-identity-protection-layer-v1.md")
     protocol = _text("docs/governance/identity-change-protocol-v1.md")
+    protocol_normalized = " ".join(protocol.split())
     spec = _text("specs/review_context_contract_v2.json")
 
     for marker in (
@@ -84,7 +85,7 @@ def validate() -> list[str]:
         if marker not in category_doc:
             errors.append(f"CATEGORY missing: {marker}")
 
-    if "stop before merge and escalate to the Architect" not in protocol:
+    if "stop before merge and escalate to the Architect" not in protocol_normalized:
         errors.append("identity change stop rule missing")
     if "No information transformation may increase the authority of its input" not in standard:
         errors.append("Non-Escalation principle missing")
