@@ -33,6 +33,37 @@ This repository publishes approved doctrine, contracts, schemas, examples, and
 externally supportable state. It is not the source of current corporate
 accepted-state authority.
 
+## Identity protection layer
+
+The governed public projection of the Nova identity kernel is:
+
+- `docs/governance/nova-identity-kernel-v1.yaml`
+
+### Non-Escalation of Authority Principle
+
+> **No information transformation may increase the authority of its input unless
+> that authority originates from an explicitly authorized external source and
+> the transformation preserves that provenance.**
+
+### Identity preservation principle
+
+> **Identity must not be inferred where lineage can be explicitly preserved.**
+
+```text
+action identity != proposal-version identity
+source identity != source-version identity
+review-profile identity != review-profile-version identity
+context identity != context-state identity
+chronology reference != chronology acceptance
+```
+
+When lineage is unavailable, preserve `lineage_unavailable` rather than infer
+continuity from similarity.
+
+Material changes to these semantics are governed by
+`docs/governance/identity-change-protocol-v1.md`. Jarvis-Nova CCO owns
+coherence review; the Architect retains final authority.
+
 ## Product and access planes
 
 ```yaml
