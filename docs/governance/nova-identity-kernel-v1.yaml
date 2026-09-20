@@ -1,0 +1,84 @@
+schema_version: "1.0.0"
+kernel_id: sharpe_nova_os_identity_kernel_v1
+kernel_version: "1.0.0"
+status: architect_authorized_governed_projection
+control_owner: Jarvis-Nova_CCO
+decision_authority: Architect
+repository_role: NON_AUTHORITATIVE_GOVERNED_PROJECTION
+canonical_repository: nova-infrastructure-systems/nova-core
+accepted_state_effect: none
+
+category:
+  canonical: pre_execution_decision_context_infrastructure
+  architectural_frame: pre_execution_decision_discipline_layer
+  canonical_statement: >-
+    Sharpe Nova OS is a pre-execution decision discipline layer that conditions
+    capital through telemetry, Reflex Memory, and constraint logic before execution.
+
+canonical_boundary:
+  prepared_action_origin: external_to_Nova
+  Nova_role: structure_review_context
+  decision_owner: local_authority
+  execution_owner: external_system
+  Nova_executes: false
+
+invariant_objects:
+  - action_identity
+  - proposal_version_identity
+  - context_identity
+  - source_provenance
+  - temporal_state
+  - constraint_context
+  - contradiction_state
+  - unresolved_conditions
+  - review_profile_identity
+  - chronology_references
+  - authority_handoff
+  - integrity_identity
+
+identity_invariants:
+  action_identity_is_proposal_version_identity: false
+  lineage_may_be_inferred_from_similarity: false
+  missing_lineage_behavior: lineage_unavailable
+  proposal_version_must_bind_exact_reviewed_material: true
+  revised_proposal_may_reuse_prior_proof_identity: false
+
+non_escalation_of_authority:
+  invariants:
+    observation_becomes_permission: false
+    history_becomes_present_authority: false
+    memory_becomes_policy: false
+    completeness_becomes_approval: false
+    validation_becomes_permission: false
+    payment_becomes_authority: false
+    model_inference_becomes_institutional_fact: false
+    integrity_becomes_authenticity: false
+
+authority_effects:
+  approval_effect: none
+  authorization_effect: none
+  execution_effect: none
+  capital_effect: none
+
+product_separation:
+  OS_is_State_Ping: false
+  OS_is_Context_Delta: false
+  OS_is_Governed_Review_Context: false
+  OS_is_Decision_Context_Packet: false
+  OS_is_x402: false
+  OS_is_public_API: false
+
+identity_change_gate:
+  CCO_review_required: true
+  explicit_Architect_approval_required: true
+  default_if_uncertain: hold_for_identity_review
+
+non_authorizations:
+  production_change: false
+  deployment: false
+  accepted_state_registry_mutation: false
+  chronology_mutation: false
+  Reflex_Memory_mutation: false
+  payment_or_settlement: false
+  credential_mutation: false
+  capital_movement: false
