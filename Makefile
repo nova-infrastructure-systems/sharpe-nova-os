@@ -29,6 +29,7 @@ verify: \
 	verify-gate5-entry-design \
 	verify-public-surface \
 	verify-publication-governance \
+	verify-identity-protection \
 	verify-tests \
 	verify-whitespace
 
