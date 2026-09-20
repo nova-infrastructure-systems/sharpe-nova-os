@@ -1,3 +1,16 @@
+> **Legacy v1 compatibility artifact**
+>
+> This document describes Legacy v1 decision-admission behavior and authority-bearing
+> compatibility semantics. It is retained for implementation, replay, migration,
+> and historical traceability only.
+>
+> It does **not** define Sharpe Nova OS's canonical current identity or target-v2
+> external semantics. New integrations must not treat `decision_status`, admission
+> outcomes, or non-bypass language here as Nova's current authority model.
+>
+> Current identity authority: `SYSTEM_IDENTITY.md` and the Nova Identity Protection
+> Layer v1.
+>
 # Sharpe Nova OS — Governance Rollout Policy (v1.0)
 
 ## Status
