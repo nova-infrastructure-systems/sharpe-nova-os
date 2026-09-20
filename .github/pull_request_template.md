@@ -287,3 +287,23 @@ This PR keeps Sharpe Nova OS aligned with the repo visibility rule:
 > Keep GitHub public enough to prove Nova.
 > Curate it enough to protect Nova.
 > Do not let the repo become the OS.
+
+
+## Identity Protection Review
+
+Classification:
+
+- [ ] `IDENTITY_PRESERVATION`
+- [ ] `IDENTITY_CHANGE`
+- [ ] `IDENTITY_NOT_AFFECTED`
+
+Confirm:
+
+- [ ] Action identity remains distinct from proposal-version identity.
+- [ ] Missing lineage is not inferred from similarity.
+- [ ] Review context is not converted into permission or recommendation.
+- [ ] Payment is not converted into authority.
+- [ ] Reflex Memory is not converted into institutional policy.
+- [ ] Product/resource semantics do not redefine the identity of Sharpe Nova OS.
+- [ ] CCO identity review completed when identity-sensitive semantics are affected.
+- [ ] Any `IDENTITY_CHANGE` has explicit Architect approval under `docs/governance/identity-change-protocol-v1.md`.
