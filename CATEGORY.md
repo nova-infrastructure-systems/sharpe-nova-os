@@ -123,8 +123,7 @@ When explicit lineage is unavailable, Nova preserves `lineage_unavailable`
 rather than inferring continuity from similarity.
 
 State Ping, Context Delta, Governed Review Context, Decision Context Packet,
-x402, and the public API are product or access surfaces. Those products do not
-define the OS.
+x402, and the public API are product or access surfaces. Those products do not define the OS.
 
 ## What Nova preserves
 
