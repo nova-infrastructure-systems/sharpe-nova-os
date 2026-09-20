@@ -10,6 +10,7 @@ PYTHON ?= .venv/bin/python
 	verify-gate5-entry-design \
 	verify-public-surface \
 	verify-publication-governance \
+	verify-identity-protection \
 	verify-tests \
 	verify-whitespace \
 	test
@@ -53,6 +54,9 @@ verify-public-surface: require-venv
 
 verify-publication-governance: require-venv
 	$(PYTHON) scripts/validate_publication_governance.py
+
+verify-identity-protection: require-venv
+	$(PYTHON) scripts/validate_identity_protection.py
 
 verify-tests: require-venv
 	$(PYTHON) -m pytest
