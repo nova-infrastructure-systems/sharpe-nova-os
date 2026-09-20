@@ -39,11 +39,13 @@ The governed public projection of the Nova identity kernel is:
 
 - `docs/governance/nova-identity-kernel-v1.yaml`
 
-Two permanent rules apply:
+### Non-Escalation of Authority Principle
 
 > **No information transformation may increase the authority of its input unless
 > that authority originates from an explicitly authorized external source and
 > the transformation preserves that provenance.**
+
+### Identity preservation principle
 
 > **Identity must not be inferred where lineage can be explicitly preserved.**
 
