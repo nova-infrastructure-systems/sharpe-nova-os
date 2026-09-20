@@ -107,6 +107,25 @@ different review context even when many underlying artifacts remain the same.
 This preserves reconstructability without implying that Nova decides whether the
 action should proceed.
 
+## Identity preservation rule
+
+Identity must not be inferred where lineage can be explicitly preserved.
+
+```text
+action identity != proposal-version identity
+source identity != source-version identity
+review-profile identity != review-profile-version identity
+context identity != context-state identity
+chronology reference != chronology acceptance
+```
+
+When explicit lineage is unavailable, Nova preserves `lineage_unavailable`
+rather than inferring continuity from similarity.
+
+State Ping, Context Delta, Governed Review Context, Decision Context Packet,
+x402, and the public API are product or access surfaces. Those products do not
+define the OS.
+
 ## What Nova preserves
 
 Depending on the bounded workflow and supplied context, Nova can preserve:
