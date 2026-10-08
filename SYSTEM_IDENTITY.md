@@ -5,8 +5,8 @@
 Sharpe Nova OS is a **pre-execution decision discipline layer** that conditions
 capital through telemetry, Reflex Memory, and constraint logic before execution.
 
-Externally, Nova is decision-context infrastructure for consequential
-machine-prepared capital actions.
+Externally, Nova is **pre-execution governance infrastructure for consequential
+machine-prepared capital actions**.
 
 ```text
 Agent prepares an action.
@@ -19,6 +19,25 @@ Nova does not execute.
 Local authority is an institution-owned role. Nova does not decide who occupies
 that role and does not inherit authority by becoming a required input to the
 institution's workflow.
+
+## External category boundary
+
+Nova does not derive its system identity from possessing institutional memory,
+historical financial context, proprietary knowledge, or firm-specific
+intelligence.
+
+Those capabilities may exist elsewhere in the institutional stack.
+
+Nova's system identity depends on preserving the bounded pre-execution review
+state relevant to an exact action while maintaining the separation between
+preparation, review, local decision authority, signing, settlement, and
+execution.
+
+```text
+intelligence about the institution
+!=
+governed state presented to authority
+```
 
 ## Repository identity
 
@@ -122,8 +141,10 @@ authorized:
 - source provenance, authority state, and observation time;
 - contradiction, missing-evidence, freshness, and limitation context;
 - institution-provided constraint context;
-- chronology references;
+- time-bounded chronology references, including what was available and
+  applicable at the review moment;
 - governed Reflex Memory references;
+- unresolved-state preservation without later-resolution contamination;
 - review completeness and unresolved conditions;
 - deterministic integrity material;
 - explicit authority handoff.
@@ -153,6 +174,8 @@ Sharpe Nova OS is not:
 - an execution engine;
 - a wallet, custodian, or signing system;
 - a generic agent framework;
+- an institutional-memory platform;
+- a financial decision-intelligence system;
 - a policy engine that owns institutional policy;
 - an approval or authorization authority.
 
