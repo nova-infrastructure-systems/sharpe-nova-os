@@ -1,7 +1,7 @@
 # Sharpe Nova OS — Current State
 
-**Effective date:** September 18, 2026  
-**Reconciliation date:** September 18, 2026  
+**Effective date:** October 7, 2026  
+**Reconciliation date:** October 7, 2026  
 **Authority:** Architect  
 **Coherence review:** Jarvis-Nova CCO  
 **Repository role:** governed public current-state projection  
@@ -25,6 +25,58 @@ Local authority decides.
 External systems execute.
 Nova does not execute.
 ```
+
+## Public distribution update — October 7, 2026
+
+The bounded retail machine-commerce surface is now independently discoverable
+through x402scan.
+
+The October 7 distribution remediation did not add a resource, change pricing,
+change settlement rails, alter authority semantics, or expand Nova into an
+execution system.
+
+The verified sequence was:
+
+```text
+bounded discovery-compatibility correction
+-> canonical repository merge
+-> exact-commit deployment
+-> live unpaid production verification
+-> independent x402scan audit
+-> public x402scan registration
+```
+
+The public x402scan registration returned:
+
+```yaml
+x402scan:
+  registration_complete: true
+  discovery_source: openapi
+  origin_id: faeca52a-1e46-4ef5-b433-360b96e7a542
+  registered_paid_resources: 4
+  registered_public_resources: 1
+  total_resources: 5
+  failed_resources: 0
+  skipped_resources: 0
+  siwx_required_for_registration: false
+```
+
+The registered public surface consists of:
+
+```text
+GET  /.well-known/x402.json
+POST /retail/v1/context/state-ping
+POST /retail/v1/context/context-delta
+POST /retail/v1/context/governed-review
+POST /retail/v1/context/decision-packet
+```
+
+The public registration does not establish buyer demand, unaffiliated payment,
+recurring paid use, operator dependency, institutional adoption, product-market
+fit, pricing power, approval authority, signing authority, or capital authority.
+
+No wallet signature, payment, settlement, or capital movement was required to
+complete the x402scan registration.
 
 ## Public projection update — September 18, 2026
 
@@ -336,9 +388,13 @@ current_product_state:
       public_service_live: true
       Base_USDC_x402_v2_live: true
       fixed_resource_pricing_live: true
-      Marketplace_submission_sent: true
-      Marketplace_listing_independently_verified: false
-      Marketplace_discovery_established: false
+      x402scan_audit_verified: true
+      x402scan_registration_complete: true
+      x402scan_paid_resources_registered: 4
+      x402scan_public_resources_registered: 1
+      x402scan_registration_failures: 0
+      x402scan_public_listing_verified: true
+      x402scan_origin_id: faeca52a-1e46-4ef5-b433-360b96e7a542
     institutional_plane:
       marketplace_activation: false
       x402_as_identity_or_authority: false
@@ -357,6 +413,10 @@ The repository and current evidence establish:
 * four independently priced public context resources: State Ping, Context Delta, Governed Review Context, and Decision Context Packet;
 * explicit `authority_effect: none`, `approval_effect: none`, and `execution_effect: none` across those resources;
 * payment isolation: access to one resource does not authorize purchase of another;
+* independently verified x402scan discovery of all four paid context resources
+  and the free machine-readable manifest;
+* completed public x402scan registration with four paid resources, one public
+  resource, and zero registration failures;
 
 * the implemented Legacy v1 runtime;
 * the approved non-authority target v2 contract;
@@ -413,6 +473,9 @@ The available evidence does not establish:
 * a live institutional pilot;
 * demonstrated operator dependency;
 * buyer pull;
+* evidence that x402scan registration has generated unaffiliated demand;
+* an unaffiliated paid x402 transaction attributable to public discovery;
+* recurring paid machine usage attributable to external discovery;
 * adoption;
 * product-market fit;
 * pricing power;
