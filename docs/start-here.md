@@ -2,8 +2,11 @@
 
 ## 1. What Nova does
 
-Sharpe Nova OS structures governed review context for consequential
-machine-prepared capital actions before local authority decides.
+Sharpe Nova OS is pre-execution governance infrastructure for consequential
+machine-prepared capital actions.
+
+It structures governed review state around an exact action before local
+authority decides.
 
 ```text
 Agent prepares an action.
@@ -18,15 +21,21 @@ through telemetry, Reflex Memory, and constraint logic before execution.
 
 ## 2. The problem Nova addresses
 
-An institution can have every document, source, rule, validation, and prior
-record present while still lacking a coherent answer to:
+An institution can have sophisticated AI, complete proprietary history,
+institutional memory, every document, source, rule, validation, and prior record
+available while still lacking a bounded answer to:
 
 - which evidence belongs to this exact action now;
-- which constraint applies under these conditions;
+- which source state was actually available at the review moment;
+- which constraint was applicable under those conditions;
 - what changed materially;
-- what prior context remains relevant;
+- what prior context remains relevant without becoming present authority;
 - what remains unresolved;
 - what local authority actually received before deciding.
+
+Nova therefore should not be understood as a system for making institutional
+history intelligent. Its object is the governed pre-execution state upon which
+local authority may rely.
 
 Nova structures those relationships without becoming the approver or execution
 layer.
