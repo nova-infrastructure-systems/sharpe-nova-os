@@ -1,8 +1,9 @@
 # Sharpe Nova OS
 
-**Pre-execution decision-context infrastructure for consequential machine-prepared capital actions.**
+**Pre-execution governance infrastructure for consequential machine-prepared capital actions.**
 
-Sharpe Nova OS structures governed review context before local authority decides.
+Sharpe Nova OS structures governed pre-execution review state around an exact
+capital action before local authority decides.
 
 ```text
 Agent prepares an action.
@@ -18,11 +19,35 @@ Nova does not execute.
 > repository. Public retained accepted-state artifacts are historical projection
 > only.
 
+## Category boundary
+
+Nova is not an institutional-intelligence, knowledge-management, or generic
+memory layer.
+
+Systems may assemble proprietary history, reconcile sources, model how a firm
+thinks, and recommend what an institution should do. Nova addresses a narrower
+pre-execution governance problem:
+
+> What evidence, constraints, unresolved conditions, source state, and prior
+> context were actually available and applicable to this exact action when
+> local authority considered it?
+
+Nova is designed to preserve that bounded review state before execution rather
+than reconstruct institutional reasoning after the fact.
+
+```text
+institutional intelligence
+!=
+authority-conditioned pre-execution review state
+```
+
 ## Why Nova exists
 
-Financial systems can preserve documents, transactions, policies, model outputs,
-and signatures while still losing the relationships that made those objects
-relevant to the exact action under review.
+Financial systems and institutional-intelligence layers can preserve extensive
+history, documents, policies, model outputs, transactions, and accumulated
+judgment while the institution still lacks a bounded record of what was
+available, applicable, unresolved, and presented around the exact action at the
+time of review.
 
 For a consequential action, local authority may need to reconstruct:
 
@@ -35,7 +60,8 @@ For a consequential action, local authority may need to reconstruct:
 - which prior context was relevant without becoming present authority;
 - what review context was actually presented before the institution decided.
 
-Nova exists to preserve and structure that review state before execution.
+Nova exists to structure and preserve that authority-conditioned review state
+before execution.
 
 ## First bounded workflow
 
@@ -50,8 +76,9 @@ Nova does not decide whether capital should move.
 
 ## What Nova is
 
-Nova is a **pre-execution decision discipline layer** that conditions capital
-through telemetry, Reflex Memory, and constraint logic before execution.
+Nova is **pre-execution governance infrastructure** whose deeper architecture
+conditions capital through telemetry, Reflex Memory, and constraint logic before
+execution.
 
 Externally, that means Nova structures review context around machine-prepared
 capital actions while preserving the institution's authority boundary.
@@ -75,6 +102,10 @@ Nova is not:
 - a trading system;
 - a signal engine;
 - a prediction layer;
+- a generic institutional-memory system;
+- an investment-intelligence layer;
+- a knowledge graph whose purpose is to model how the institution thinks;
+- a system whose differentiation is merely assembling historical context;
 - a portfolio optimizer;
 - an execution engine;
 - a wallet or custodian;
