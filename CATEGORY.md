@@ -2,8 +2,8 @@
 
 ## Category
 
-Sharpe Nova OS is **pre-execution decision-context infrastructure** for
-consequential machine-prepared capital actions.
+Sharpe Nova OS is **pre-execution governance infrastructure** for consequential
+machine-prepared capital actions.
 
 Its deeper architectural frame is a **pre-execution decision discipline layer**
 that conditions capital through telemetry, Reflex Memory, and constraint logic
@@ -25,20 +25,62 @@ that position.
 Nova does not decide who holds that authority and does not inherit it by being
 required in the workflow.
 
+## Category boundary
+
+Nova does not own the category of institutional intelligence.
+
+Institutional systems may:
+
+- assemble proprietary financial history;
+- reconcile conflicting sources;
+- encode accumulated firm judgment;
+- make historical knowledge usable by AI;
+- model how the institution typically evaluates a situation;
+- recommend or inform a present decision.
+
+Those capabilities may be valuable without being Nova.
+
+Nova's narrower object is the governed pre-execution state around an exact
+capital action:
+
+- what information was actually available;
+- which source state existed at that time;
+- which institution-defined constraints were applicable;
+- which conditions remained unresolved;
+- which prior context was relevant without becoming present authority;
+- which exact proposal version was under review;
+- what local authority actually received before deciding.
+
+```text
+institutional memory
+!=
+authority-conditioned review state
+
+historical similarity
+!=
+precedent
+
+later knowledge
+!=
+information available at review time
+```
+
 ## The shift
 
 Capital workflows are becoming increasingly machine-prepared and
 machine-mediated.
 
-Agents, wallets, policy systems, treasury systems, custodians, and execution
-rails can each perform their own job correctly while the institution still
-lacks one coherent review state around the exact action before authority
-decides.
+Agents, institutional-intelligence systems, policy systems, treasury systems,
+wallets, custodians, and execution rails can each perform their own job
+correctly while the institution still lacks one bounded governed review state
+around the exact action before authority decides.
 
-The missing object is not another execution instruction.
+The missing object is not more institutional intelligence or another execution
+instruction.
 
-It is the governed relationship among evidence, history, constraints, unresolved
-conditions, and the exact proposed action under review.
+It is the governed relationship among evidence, source state, applicable
+constraints, unresolved conditions, relevant prior context, and the exact
+proposed action as they existed at the review moment.
 
 ## The problem
 
@@ -167,6 +209,9 @@ Nova is not:
 - a wallet, custodian, or signing system;
 - an institutional approval or authorization authority;
 - a policy engine that owns the institution's decision;
+- an institutional-intelligence platform;
+- a generic institutional-memory layer;
+- a system whose moat is simply knowing what happened historically;
 - a generic context warehouse or memory product.
 
 ## Category test
@@ -181,7 +226,7 @@ The category remains coherent only if this boundary survives:
 
 Nova does not determine whether capital should move.
 
-Nova structures governed decision context around the exact action under review
+Nova structures governed pre-execution review state around the exact action
 before local authority decides.
 
 Authority remains local.
