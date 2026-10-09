@@ -1,9 +1,10 @@
 # Nova Identity Protection Layer v1
 
-**Status:** active governed public projection  
-**Control owner:** Jarvis-Nova CCO  
-**Decision authority:** Architect  
-**Canonical authority source:** `nova-infrastructure-systems/nova-core`  
+**Status:** active governed public projection<br>
+**Control owner:** Jarvis-Nova CCO<br>
+**Decision authority:** Architect<br>
+**Corporate narrative authority source:** `nova-infrastructure-systems/nova-infrastructure-corporate`<br>
+**Technical accepted-state authority source:** `nova-infrastructure-systems/nova-core`<br>
 **Machine projection:** `docs/governance/nova-identity-kernel-v1.yaml`
 
 ## Purpose
@@ -16,8 +17,8 @@ bounded external contract and proof surface.
 Sharpe Nova OS is a pre-execution decision discipline layer that conditions
 capital through telemetry, Reflex Memory, and constraint logic before execution.
 
-Externally, Nova is pre-execution decision-context infrastructure for
-consequential machine-prepared capital actions.
+Externally, Nova is pre-execution governance infrastructure for consequential
+machine-prepared capital actions.
 
 ```text
 Agent prepares an action.
@@ -79,7 +80,8 @@ Material changes to category, authority model, identity semantics, chronology or
 Reflex Memory meaning, payment/authority semantics, or the canonical kernel are
 governed by `docs/governance/identity-change-protocol-v1.md`.
 
-The public repository cannot create corporate accepted state.
+The public repository cannot create corporate commercial state or Sharpe Nova OS
+technical accepted state.
 
 This control creates no production, deployment, payment, settlement, chronology,
 Reflex Memory, credential, accepted-state, or capital authority.

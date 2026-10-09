@@ -9,7 +9,8 @@
 
 ```text
 Public = contract, doctrine, interoperability, and approved proof.
-Private = production machinery, proprietary derivation, corporate state, and operating evidence.
+Private technical = technical accepted state, production machinery, proprietary derivation, and operating evidence.
+Private corporate = corporate commercial state, governance, pricing, sales operations, and sanitized evidence.
 Provider-only = secrets and live environment values.
 ```
 
@@ -47,24 +48,42 @@ Permitted content includes:
 - public security and responsible-disclosure policy;
 - public changelog and externally supportable state claims.
 
-The public repository is not the authoritative corporate accepted-state store.
-Its retained accepted-state artifacts are historical governed projections only
-and must not be used to create current corporate accepted-state claims.
+The public repository is not the authoritative corporate commercial-state store
+or the authoritative Sharpe Nova OS technical accepted-state store. Its retained
+accepted-state artifacts are historical governed projections only.
 
-### Private Nova corporate / production repository
+### Private corporate commercial repository
 
-Purpose: authoritative corporate operating state and production implementation.
+Purpose: authoritative corporate commercial operating state.
 
-Current accepted-state role: `CANONICAL_CORPORATE_ACCEPTED_STATE_AUTHORITY`.
+Canonical repository:
 
-Canonical accepted-state repository:
+```text
+nova-infrastructure-systems/nova-infrastructure-corporate
+```
+
+This repository governs approved commercial architecture, pricing, sales
+operations, sanitized commercial evidence, strategic falsification constraints,
+external narrative guardrails, and continuity state.
+
+It does not create Sharpe Nova OS technical accepted state or production authority.
+
+### Private technical accepted-state / production repository
+
+Purpose: authoritative Sharpe Nova OS technical accepted state and production
+implementation.
+
+Current technical accepted-state role:
+`CANONICAL_TECHNICAL_ACCEPTED_STATE_AUTHORITY`.
+
+Canonical technical repository:
 
 ```text
 nova-infrastructure-systems/nova-core
 governance/accepted-state/registry.yaml
 ```
 
-Private-by-default content includes:
+Private-by-default technical content includes:
 
 - production server implementation;
 - deployment manifests and provider topology;
@@ -73,7 +92,7 @@ Private-by-default content includes:
 - payment verification internals and settlement reconciliation;
 - idempotency, recovery, control-store, rate-limit, and kill-switch implementation;
 - production telemetry internals and incident evidence;
-- corporate governance decisions and accepted-state records not approved for publication;
+- technical governance decisions and accepted-state records not approved for publication;
 - institutional tenant implementation, authority maps, chronology, Reflex Memory stores, constraints, and private adapters;
 - operator runbooks and internal failure procedures.
 
@@ -91,7 +110,7 @@ Provider-only state includes:
 - tenant secrets;
 - provider account secrets.
 
-## Accepted-state authority transfer
+## Historical technical accepted-state authority transfer
 
 The transition rule was:
 
@@ -120,12 +139,20 @@ private_completion_evidence_merge_commit: 052cdaf256c846489bc12b54a5b698411247fc
 Current topology:
 
 ```text
-Private corporate repository
-= authoritative corporate accepted state
+nova-infrastructure-corporate
+= authoritative corporate commercial state
 
-Public sharpe-nova-os repository
-= approved non-authoritative governed projection
+nova-core
+= authoritative Sharpe Nova OS technical accepted state + production implementation
+
+sharpe-nova-os
+= approved non-authoritative governed public projection
 ```
+
+The August 28 transfer records predate the later corporate/technical authority
+split. Their historical identifiers remain preserved, but they must now be read
+as evidence of the technical accepted-state transfer into `nova-core`, not as
+authority over current corporate commercial state.
 
 No authority gap or dual undisputed authority was created by the transfer.
 Authority reversion would require a separate explicit Architect decision.
@@ -139,8 +166,8 @@ current accepted-state claims.
 The retained public accepted-state registry may be used only for bounded
 historical context. Public compatibility code must not:
 
-- identify public `origin/main` as the current corporate accepted-state source;
-- create or imply current corporate accepted state;
+- identify public `origin/main` as the current corporate commercial-state or technical accepted-state source;
+- create or imply current corporate commercial state or technical accepted state;
 - create chronology or Reflex Memory acceptance;
 - request accepted-state mutation merely because private state is unavailable;
 - silently substitute a public mirror or checkout for the private canonical registry.

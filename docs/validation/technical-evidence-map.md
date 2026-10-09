@@ -22,7 +22,7 @@ Nova does not execute.
 
 | Claim | Public evidence | Evidence class |
 |---|---|---|
-| Nova is pre-execution decision-context infrastructure | `README.md`, `CATEGORY.md`, `SYSTEM_IDENTITY.md` | Category / doctrine |
+| Nova is pre-execution governance infrastructure for consequential machine-prepared capital actions | `README.md`, `CATEGORY.md`, `SYSTEM_IDENTITY.md` | Category / doctrine |
 | Nova preserves a non-authority boundary | `CATEGORY.md`, `docs/start-here.md`, doctrine lint, public boundary tests | Public doctrine + executable validation |
 | Nova defines an external review-context contract | `docs/architecture/external-review-context-contract-v2.md`, `specs/review_context_contract_v2.json` | Public contract |
 | Nova defines exact-action review context for a bounded treasury workflow | `docs/go-to-market/first-use-case-agent-prepared-treasury-action.md`, `docs/architecture/agent-prepared-stablecoin-treasury-integration-path.md` | Public workflow specification |

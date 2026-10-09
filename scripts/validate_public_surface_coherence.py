@@ -54,6 +54,34 @@ CURRENT_SURFACES = (
     "docs/operations/production-readiness-register.md",
 )
 
+CATEGORY_AND_AUTHORITY_SURFACES = (
+    "README.md",
+    "CATEGORY.md",
+    "SYSTEM_IDENTITY.md",
+    "CURRENT_STATE.md",
+    "docs/start-here.md",
+    "docs/governance/nova-identity-protection-layer-v1.md",
+    "docs/operations/public-surface-coherence-standard.md",
+    "docs/operations/production-readiness-register.md",
+)
+
+STALE_EXTERNAL_CATEGORY_PHRASES = (
+    "pre-execution decision-context infrastructure",
+    "pre-execution environmental governance infrastructure",
+    "pre-execution environmental governance layer",
+)
+
+HISTORICAL_PATH_PREFIXES = (
+    "archive/",
+    "docs/legacy-v1/",
+    "docs/governance-epochs/",
+)
+
+HISTORICAL_EXACT_PATHS = {
+    "docs/governance/canonical-authority-transfer-activation-2026-08-28.yaml",
+    "docs/governance/canonical-authority-public-projection-transition-2026-08-28.yaml",
+}
+
 
 @dataclass(frozen=True)
 class ValidationError:
@@ -181,6 +209,12 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
         "docs/operations/production-readiness-register.md",
         errors,
     )
+    category_doc = _read(root, "CATEGORY.md", errors)
+    system_identity = _read(root, "SYSTEM_IDENTITY.md", errors)
+    start_here = _read(root, "docs/start-here.md", errors)
+    identity_layer = _read(root, "docs/governance/nova-identity-protection-layer-v1.md", errors)
+    coherence_standard = _read(root, "docs/operations/public-surface-coherence-standard.md", errors)
+    identity_kernel = _read(root, "docs/governance/nova-identity-kernel-v1.yaml", errors)
     reviewer_paths = _read(root, "docs/reviewer-paths.md", errors)
     exposure_boundary = _read(
         root,
@@ -194,6 +228,12 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
     _require(errors, "docs/target-v2/README.md" in readme, "root_README.links_to_target_v2", "missing target v2 entry link")
     _require(errors, all(line in readme for line in BOUNDARY_LINES), "root_README.canonical_boundary_present", "canonical five-line boundary is incomplete")
     _require(errors, "agent-prepared stablecoin treasury action" in readme.lower(), "root_README.first_workflow_present", "first bounded workflow is missing")
+    _require(
+        errors,
+        "Pre-execution governance infrastructure for consequential machine-prepared capital actions." in readme,
+        "root_README.canonical_external_category",
+        "canonical external category is missing from root README",
+    )
     _require(
         errors,
         "## Current state" in readme
@@ -230,6 +270,107 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
         for relative in CURRENT_SURFACES
         if (root / relative).is_file()
     )
+    category_and_authority_current = "\n".join(
+        _read(root, relative, errors)
+        for relative in CATEGORY_AND_AUTHORITY_SURFACES
+        if (root / relative).is_file()
+    )
+
+    _require(
+        errors,
+        "pre-execution decision-context infrastructure" not in category_and_authority_current.lower(),
+        "category.current_surfaces_no_stale_decision_context_category",
+        "stale decision-context infrastructure category remains on a current surface",
+    )
+    _require(
+        errors,
+        "authority-conditioned" not in category_and_authority_current.lower(),
+        "category.current_surfaces_no_authority_conditioned_language",
+        "stale authority-conditioned language remains on a current surface",
+    )
+
+    for surface_name, surface_text in (
+        ("README", readme),
+        ("CURRENT_STATE", current),
+        ("SYSTEM_IDENTITY", system_identity),
+        ("START_HERE", start_here),
+    ):
+        _require(
+            errors,
+            "nova-infrastructure-systems/nova-infrastructure-corporate" in surface_text,
+            f"authority_domains.{surface_name}.corporate_commercial_source",
+            "canonical corporate commercial-state repository is missing",
+        )
+        _require(
+            errors,
+            "nova-infrastructure-systems/nova-core" in surface_text,
+            f"authority_domains.{surface_name}.technical_accepted_state_source",
+            "canonical technical accepted-state repository is missing",
+        )
+
+    _require(
+        errors,
+        "canonical_corporate_accepted_state_source" not in current
+        and "Canonical corporate accepted-state authority" not in current,
+        "authority_domains.CURRENT_STATE.no_legacy_combined_authority",
+        "legacy combined corporate/technical authority label remains in CURRENT_STATE",
+    )
+    _require(
+        errors,
+        "canonical: pre_execution_governance_infrastructure" in identity_kernel
+        and "canonical_corporate_commercial_state_repository: nova-infrastructure-systems/nova-infrastructure-corporate" in identity_kernel
+        and "canonical_technical_accepted_state_repository: nova-infrastructure-systems/nova-core" in identity_kernel,
+        "identity_kernel.current_category_and_authority_domains",
+        "identity kernel does not encode current category and authority-domain split",
+    )
+    _require(
+        errors,
+        "canonical_corporate_commercial_state:" in coherence_standard
+        and "canonical_technical_accepted_state:" in coherence_standard,
+        "coherence_standard.authority_domain_split",
+        "public-surface coherence standard does not encode both authority domains",
+    )
+
+    # Fail closed when superseded external-category language reappears on an
+    # unlabeled current public surface. Historical transfer records and explicit
+    # superseded artifacts may preserve older wording for provenance.
+    for candidate in root.rglob("*"):
+        if not candidate.is_file():
+            continue
+        rel = candidate.relative_to(root).as_posix()
+        if rel.startswith(".git/") or rel.startswith(".venv/"):
+            continue
+        if any(rel.startswith(prefix) for prefix in HISTORICAL_PATH_PREFIXES):
+            continue
+        if rel in HISTORICAL_EXACT_PATHS:
+            continue
+        if candidate.suffix.lower() not in {".md", ".txt", ".yaml", ".yml"}:
+            continue
+        try:
+            candidate_text = candidate.read_text(encoding="utf-8")
+        except (OSError, UnicodeError):
+            continue
+        lowered_candidate = candidate_text.lower()
+        stale_hits = [
+            phrase for phrase in STALE_EXTERNAL_CATEGORY_PHRASES
+            if phrase in lowered_candidate
+        ]
+        if not stale_hits:
+            continue
+        first_40 = "\n".join(candidate_text.splitlines()[:40]).upper()
+        explicitly_historical = (
+            "SUPERSEDED HISTORICAL" in first_40
+            or "HISTORICAL PROJECTION" in first_40
+            or "HISTORICAL EVIDENCE" in first_40
+        )
+        _require(
+            errors,
+            explicitly_historical,
+            f"category.stale_unlabeled_surface.{rel}",
+            "stale external-category language appears without an explicit historical/superseded boundary: "
+            + ", ".join(stale_hits),
+        )
+
     _require(errors, not _has_unqualified_production_ready_claim(combined_current), "production_claims.unqualified_system_wide_production_ready_claim_absent", "unqualified system-wide production-ready claim is present")
     _require(errors, _contains_yaml_value(readiness, "system_wide_production_readiness", "not_established"), "production_claims.system_wide_production_readiness_not_established", "system-wide readiness must be not established")
     _require(errors, _contains_yaml_value(readiness, "institutional_pilot", "not_started"), "production_claims.institutional_pilot_not_started", "institutional pilot must be not started")
@@ -274,7 +415,8 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
     # Public/private repository transition must fail closed on authority transfer.
     for marker in (
         "Public = contract, doctrine, interoperability, and approved proof.",
-        "Private = production machinery, proprietary derivation, corporate state, and operating evidence.",
+        "Private technical = technical accepted state, production machinery, proprietary derivation, and operating evidence.",
+        "Private corporate = corporate commercial state, governance, pricing, sales operations, and sanitized evidence.",
         "private repository created\n!= authority transferred",
         "Architect explicitly accepts authority transfer",
     ):

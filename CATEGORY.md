@@ -54,7 +54,7 @@ capital action:
 ```text
 institutional memory
 !=
-authority-conditioned review state
+bounded governed review state presented to local authority
 
 historical similarity
 !=

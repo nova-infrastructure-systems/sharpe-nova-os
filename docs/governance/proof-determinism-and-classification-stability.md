@@ -120,7 +120,11 @@ Any intentional change should be visible in the proof input, governance record, 
 
 Proof determinism does not turn Nova into an execution authority.
 
-Nova remains pre-execution environmental governance infrastructure. It emits governance context, proof records, classifications, and telemetry for upstream systems to inspect. It does not move capital, authorize execution, optimize trades, or control agents.
+Nova remains pre-execution governance infrastructure for consequential
+machine-prepared capital actions. It structures review context, proof records,
+classifications, and telemetry for local authority or upstream systems to
+inspect. It does not move capital, authorize execution, optimize trades, or
+control agents.
 
 Reflex calibration improves chronology consistency and institutional inspectability.
 

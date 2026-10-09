@@ -14,10 +14,11 @@ Nova does not execute.
 ```
 
 > **Repository role:** this public repository is the governed external projection of
-> Sharpe Nova OS. Canonical corporate accepted state and private production
-> implementation live in the private `nova-infrastructure-systems/nova-core`
-> repository. Public retained accepted-state artifacts are historical projection
-> only.
+> Sharpe Nova OS. Canonical corporate commercial state lives in the private
+> `nova-infrastructure-systems/nova-infrastructure-corporate` repository.
+> Canonical technical accepted state and private production implementation live
+> in the private `nova-infrastructure-systems/nova-core` repository. Public
+> retained accepted-state artifacts are historical technical projection only.
 
 ## Category boundary
 
@@ -38,7 +39,7 @@ than reconstruct institutional reasoning after the fact.
 ```text
 institutional intelligence
 !=
-authority-conditioned pre-execution review state
+bounded governed pre-execution review state presented to local authority
 ```
 
 ## Why Nova exists
@@ -60,8 +61,8 @@ For a consequential action, local authority may need to reconstruct:
 - which prior context was relevant without becoming present authority;
 - what review context was actually presented before the institution decided.
 
-Nova exists to structure and preserve that authority-conditioned review state
-before execution.
+Nova exists to structure and preserve that bounded governed pre-execution review
+state before local authority decides and external execution occurs.
 
 ## First bounded workflow
 
@@ -205,8 +206,9 @@ Provider-only
 = secret values and live environment credentials
 ```
 
-The public repository is not the canonical corporate accepted-state store and
-does not expose private operating evidence merely to increase transparency.
+The public repository is neither the canonical corporate commercial-state source
+nor the canonical technical accepted-state source. It does not expose private
+operating evidence merely to increase transparency.
 
 ## Architecture and governance
 

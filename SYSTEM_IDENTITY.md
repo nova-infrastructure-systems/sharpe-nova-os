@@ -45,12 +45,13 @@ governed state presented to authority
 repository:
   public_projection: nova-infrastructure-systems/sharpe-nova-os
   public_role: NON_AUTHORITATIVE_GOVERNED_PROJECTION
-  canonical_corporate_accepted_state: nova-infrastructure-systems/nova-core
+  canonical_corporate_commercial_state: nova-infrastructure-systems/nova-infrastructure-corporate
+  canonical_technical_accepted_state: nova-infrastructure-systems/nova-core
 ```
 
 This repository publishes approved doctrine, contracts, schemas, examples, and
 externally supportable state. It is not the source of current corporate
-accepted-state authority.
+commercial state or Sharpe Nova OS technical accepted state.
 
 ## Identity protection layer
 

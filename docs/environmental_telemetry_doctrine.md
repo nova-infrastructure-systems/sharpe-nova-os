@@ -1,8 +1,14 @@
 # Nova Environmental Telemetry Doctrine
 
+**Status:** SUPERSEDED HISTORICAL DOCTRINE<br>
+**Current category:** Sharpe Nova OS is pre-execution governance infrastructure for consequential machine-prepared capital actions.<br>
+**Current authority boundary:** Agent prepares action. Nova structures review context. Local authority decides. External systems execute. Nova does not execute.
+
+This file preserves an earlier product-generation framing for historical traceability. It must not be used as current category, authority, product, pricing, monetization, GTM, or implementation guidance. Where statements below conflict with current governed doctrine, the current corporate and technical authority domains control.
+
 Environmental telemetry is derivative environmental conditioning infrastructure generated from Nova's sovereign reflex architecture.
 
-Telemetry informs posture. Nova determines permission.
+Historical framing stated that telemetry informed posture while Nova determined permission. That authority framing is superseded. Current rule: Nova does not determine permission; local authority decides.
 
 ## 1. Environmental Telemetry Definition
 
@@ -58,7 +64,7 @@ Nova is environment-aware behavioral chronology infrastructure. It influences:
 - synchronization posture
 - adaptive coordination behavior
 
-Temporal governance is not merely permission. It conditions the rhythm of autonomous execution ecosystems while leaving admission authority inside Nova's sovereign layer.
+Historical temporal-governance framing is retained for traceability. Under the current boundary, decision authority remains outside Nova with local authority.
 
 ## 4. Behavioral Governance Infrastructure
 
@@ -196,7 +202,7 @@ Every feed must preserve:
 
 ```text
 Telemetry informs posture.
-Only Nova admits decisions.
+Nova does not admit decisions under the current system boundary; local authority decides.
 ```
 
 Telemetry must never replace `/v1/context`.

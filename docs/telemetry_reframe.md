@@ -35,9 +35,9 @@ The market can map Nova to observational systems:
 
 > **what is happening**
 
-instead of pre-action context systems:
+instead of pre-action governance systems:
 
-> **what environmental posture exists before local action**
+> **what governed review state exists before local authority decides**
 
 ## Required Shift
 
@@ -53,7 +53,7 @@ To:
 
 Sharpe Nova OS is:
 
-> **a pre-execution environmental governance layer**
+> **pre-execution governance infrastructure for consequential machine-prepared capital actions**
 
 Execution authority is not inside Nova.
 
@@ -169,6 +169,6 @@ Systems depend on:
 
 > **reviewable pre-action context states**
 
-Sharpe Nova OS defines:
+Sharpe Nova OS structures:
 
-> **the environmental posture before local systems decide whether capital moves**
+> **bounded governed pre-execution review state before local authority decides whether capital should move**
