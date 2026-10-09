@@ -1,15 +1,19 @@
 schema_version: "1.0.0"
 kernel_id: sharpe_nova_os_identity_kernel_v1
-kernel_version: "1.0.0"
+kernel_version: "1.1.0"
 status: architect_authorized_governed_projection
 control_owner: Jarvis-Nova_CCO
 decision_authority: Architect
 repository_role: NON_AUTHORITATIVE_GOVERNED_PROJECTION
-canonical_repository: nova-infrastructure-systems/nova-core
+canonical_corporate_commercial_state_repository: nova-infrastructure-systems/nova-infrastructure-corporate
+canonical_technical_accepted_state_repository: nova-infrastructure-systems/nova-core
 accepted_state_effect: none
 
 category:
-  canonical: pre_execution_decision_context_infrastructure
+  canonical: pre_execution_governance_infrastructure
+  external_statement: >-
+    Sharpe Nova OS is pre-execution governance infrastructure for consequential
+    machine-prepared capital actions.
   architectural_frame: pre_execution_decision_discipline_layer
   canonical_statement: >-
     Sharpe Nova OS is a pre-execution decision discipline layer that conditions
