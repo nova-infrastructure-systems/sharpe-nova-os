@@ -1,6 +1,8 @@
 # Contributing
 
-Thank you for contributing to Sharpe Nova OS. Contributions should preserve the system's role as pre-execution environmental governance infrastructure.
+Thank you for contributing to Sharpe Nova OS. Contributions should preserve the
+system's role as pre-execution governance infrastructure for consequential
+machine-prepared capital actions.
 
 ## Doctrine Boundaries
 
@@ -10,7 +12,8 @@ Contributions must preserve these boundaries:
 - Nova does not move capital.
 - Nova does not provide trading signals.
 - Nova does not optimize portfolios.
-- Nova emits environmental state for local operators, agents, and orchestration systems to consume before making their own decisions.
+- Nova structures bounded governed pre-execution review context; local authority
+  decides and external systems execute.
 
 Avoid adding examples, field names, docs, or tests that imply Nova grants permission, approves decisions, executes orders, or recommends trades.
 
