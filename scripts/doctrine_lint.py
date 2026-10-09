@@ -366,7 +366,7 @@ def scan_text(path: Path, text: str, root: Path = REPO_ROOT) -> list[Finding]:
                         line_number,
                         "warning",
                         "deprecated-term",
-                        f"prefer canonical environmental-governance wording over {term!r}",
+                        f"prefer canonical pre-execution-governance wording over {term!r}",
                     )
                 )
 
