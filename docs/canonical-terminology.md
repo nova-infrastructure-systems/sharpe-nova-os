@@ -1,6 +1,14 @@
 # Canonical Terminology Registry
 
-This registry is the canonical language surface for Sharpe Nova OS Month Two infrastructure consolidation. It exists to preserve environmental-governance framing, chronology continuity, and orchestration insertion discipline across repository documentation, examples, and future governance artifacts.
+This registry is the current public language surface for Sharpe Nova OS. It exists
+to preserve the approved pre-execution governance category, the non-authority
+boundary, decision-state precision, chronology integrity, and semantic
+compatibility across public documentation, examples, and governance artifacts.
+
+Corporate commercial and external-narrative authority is governed in
+`nova-infrastructure-systems/nova-infrastructure-corporate`. Sharpe Nova OS
+technical accepted state remains governed in `nova-infrastructure-systems/nova-core`.
+This public registry is a non-authoritative projection of those approved boundaries.
 
 ## Product-Generation Terminology Scope
 
@@ -67,38 +75,46 @@ language.
 
 ## Approved Canonical Phrases
 
-- environmental governance
-- derivative telemetry
-- coordination conditioning
-- pacing legitimacy
-- chronology continuity
-- environmental admissibility
-- orchestration stabilization
-- environmental chronology infrastructure
-- coordination chronology infrastructure
-- temporal conditioning infrastructure
-- pacing legitimacy infrastructure
-- environmental conditioning infrastructure
-- upstream environmental conditioning infrastructure
-- coordination stabilization infrastructure
-- retry suppression
-- escalation suppression
-- orchestration throughput stabilization
-- pacing normalization
-- environmental lineage records
-- Reflex continuity archives
-- semantic migration registry
-- governance epoch tracking
+- pre-execution governance infrastructure
+- consequential machine-prepared capital actions
+- pre-execution decision discipline layer
+- governed pre-execution review state
+- bounded governed pre-execution review state presented to local authority
+- local authority
+- exact-action review context
+- decision-state preservation
+- source provenance
+- source state
+- constraint applicability
+- unresolved-state preservation
+- temporal integrity
+- proposal-version identity
+- material change
+- reconsideration condition
+- explicit authority handoff
+- Reflex Memory
+- chronology integrity
+- context integrity proof
+- authority_effect = none
 
-## Environmental-Governance Definitions
+## Current Definitions
 
-- Environmental governance: The structured interpretation of surrounding risk, coordination, telemetry, and pacing conditions before downstream systems decide how to proceed.
-- Derivative telemetry: Computed context derived from environmental inputs and Reflex continuity records; it is not a prediction, signal, or execution instruction.
-- Coordination conditioning: Upstream context that helps autonomous systems coordinate timing, pacing, escalation, and retry behavior without granting execution authority.
-- Pacing legitimacy: The defensible continuity of timing behavior across epochs, migrations, and repeated coordination events.
-- Chronology continuity: The preserved historical ordering of doctrine, migration, Reflex lineage, and governance records.
-- Environmental admissibility: A contextual state describing whether surrounding conditions are coherent enough for downstream orchestration consideration.
-- Orchestration stabilization: The reduction of retry amplification, congestion, escalation, and coordination entropy in systems that consume Nova context.
+- Pre-execution governance infrastructure: Infrastructure that structures and
+  preserves bounded governed review state before local authority decides and
+  external systems execute.
+- Governed review state: The relationship among the exact proposed action,
+  relevant evidence and source state, applicable constraints, unresolved
+  conditions, relevant prior context, material changes, and authority handoff at
+  the review moment.
+- Decision-state preservation: Preserving what local authority actually received
+  and what remained applicable or unresolved before deciding.
+- Temporal integrity: Keeping what was known and applicable at decision time
+  distinct from information or resolution that arrived later.
+- Reconsideration condition: A material change that may require local authority
+  to re-evaluate the governed basis on which an operating mandate or prior review
+  was relying.
+- Reflex Memory: Governed prior context that may condition review without
+  becoming present policy or authority.
 
 ## Deprecated Phrases
 
@@ -119,17 +135,17 @@ Use these only inside explicit migration, audit, or boundary-validation artifact
 
 ## Migration Mappings
 
-- payment-permission layer -> environmental governance layer
-- execution permission -> environmental admissibility context
-- decision approval -> coordination-state emission
-- trading-signal system -> derivative telemetry surface
-- prediction system -> environmental telemetry interpretation
-- optimization engine -> pacing normalization infrastructure
-- execution middleware -> upstream environmental conditioning infrastructure
-- AI signal infrastructure -> coordination stabilization infrastructure
-- alpha generation -> throughput preservation and escalation reduction
-- trading optimization -> orchestration stabilization
-- telemetry dashboard tooling -> environmental chronology infrastructure
+- payment-permission layer -> governed pre-execution review state
+- execution permission -> local authority decision outside Nova
+- decision approval -> bounded review context presented to local authority
+- trading-signal system -> pre-execution governance infrastructure
+- prediction system -> source-aware review context
+- optimization engine -> outside Nova's category
+- execution middleware -> external execution system
+- AI signal infrastructure -> pre-execution governance infrastructure
+- alpha generation -> outside Nova's category
+- trading optimization -> outside Nova's category
+- telemetry dashboard tooling -> bounded review-context / chronology surface
 
 ## Prohibited Execution-Authority Wording
 
@@ -150,9 +166,16 @@ The following wording is prohibited outside this registry and explicit test fixt
 Boundary language may name execution authority only when it clearly negates that role, for example:
 
 - Nova does not grant execution authority.
-- Nova emits environmental context; downstream systems retain execution responsibility.
+- Nova structures governed review context; local authority decides and external systems retain execution responsibility.
 - Proof artifacts verify chronology and context integrity; they are not permission grants.
 
 ## Governance Rule
 
-Doctrinal changes should be recorded chronologically in semantic migration logs or governance epoch records. Category changes must preserve environmental-governance framing and avoid converting Nova into execution software, an orchestration controller, or a prediction-centric system.
+Doctrinal changes should be recorded chronologically in semantic migration logs
+or governance epoch records. Current public category language must preserve
+pre-execution governance framing and avoid converting Nova into execution
+software, an approval authority, an interoperability/connective-tissue layer, a
+treasury optimizer, or a prediction-centric system.
+
+Historical environmental-governance terminology may remain inside clearly
+historical or superseded artifacts. It is not the current external category.
