@@ -76,9 +76,9 @@ External systems execute.
 Nova does not execute.
 ```
 
-Sharpe Nova OS is pre-execution decision-context infrastructure. It does not
-approve, authorize, sign, settle, execute, custody capital, or replace local
-authority.
+Sharpe Nova OS is pre-execution governance infrastructure for consequential
+machine-prepared capital actions. It does not approve, authorize, sign, settle,
+execute, custody capital, or replace local authority.
 
 ## Repository readiness
 
@@ -89,7 +89,9 @@ Public
 = category + doctrine + contracts + schemas + synthetic proof + verification
 
 Private
-= production machinery + proprietary derivation + corporate state + operating evidence
+= technical accepted state + production machinery + proprietary derivation
+  + corporate commercial state in separate governed repositories
+  + operating evidence
 ```
 
 The authorized September 18, 2026 sanitization removed private-target runtime,
@@ -152,8 +154,9 @@ pilot exists.
 
 ## Production custody and operating evidence
 
-The public repository is not the canonical production implementation or the
-canonical corporate accepted-state store.
+The public repository is not the canonical production implementation, the
+canonical technical accepted-state source, or the canonical corporate
+commercial-state source.
 
 Detailed provider-control, credential, recovery, deployment, incident, and
 production-custody evidence is intentionally private. The public projection may
@@ -165,8 +168,11 @@ Accordingly:
 ```yaml
 production_evidence_boundary:
   canonical_production_implementation_repository: nova-infrastructure-systems/nova-core
+  canonical_technical_accepted_state_repository: nova-infrastructure-systems/nova-core
+  canonical_corporate_commercial_state_repository: nova-infrastructure-systems/nova-infrastructure-corporate
   public_repository_is_production_source: false
-  public_repository_is_corporate_accepted_state: false
+  public_repository_is_technical_accepted_state: false
+  public_repository_is_corporate_commercial_state: false
   production_custody_attestation: not_complete
   system_wide_production_readiness: not_established
 ```
