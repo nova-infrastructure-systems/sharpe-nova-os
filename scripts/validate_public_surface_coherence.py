@@ -54,6 +54,17 @@ CURRENT_SURFACES = (
     "docs/operations/production-readiness-register.md",
 )
 
+CATEGORY_AND_AUTHORITY_SURFACES = (
+    "README.md",
+    "CATEGORY.md",
+    "SYSTEM_IDENTITY.md",
+    "CURRENT_STATE.md",
+    "docs/start-here.md",
+    "docs/governance/nova-identity-protection-layer-v1.md",
+    "docs/operations/public-surface-coherence-standard.md",
+    "docs/operations/production-readiness-register.md",
+)
+
 
 @dataclass(frozen=True)
 class ValidationError:
@@ -181,6 +192,12 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
         "docs/operations/production-readiness-register.md",
         errors,
     )
+    category_doc = _read(root, "CATEGORY.md", errors)
+    system_identity = _read(root, "SYSTEM_IDENTITY.md", errors)
+    start_here = _read(root, "docs/start-here.md", errors)
+    identity_layer = _read(root, "docs/governance/nova-identity-protection-layer-v1.md", errors)
+    coherence_standard = _read(root, "docs/operations/public-surface-coherence-standard.md", errors)
+    identity_kernel = _read(root, "docs/governance/nova-identity-kernel-v1.yaml", errors)
     reviewer_paths = _read(root, "docs/reviewer-paths.md", errors)
     exposure_boundary = _read(
         root,
@@ -194,6 +211,12 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
     _require(errors, "docs/target-v2/README.md" in readme, "root_README.links_to_target_v2", "missing target v2 entry link")
     _require(errors, all(line in readme for line in BOUNDARY_LINES), "root_README.canonical_boundary_present", "canonical five-line boundary is incomplete")
     _require(errors, "agent-prepared stablecoin treasury action" in readme.lower(), "root_README.first_workflow_present", "first bounded workflow is missing")
+    _require(
+        errors,
+        "Pre-execution governance infrastructure for consequential machine-prepared capital actions." in readme,
+        "root_README.canonical_external_category",
+        "canonical external category is missing from root README",
+    )
     _require(
         errors,
         "## Current state" in readme
