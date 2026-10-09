@@ -44,12 +44,16 @@ layer.
 
 This public repository is the governed external projection of Sharpe Nova OS.
 
-The canonical corporate accepted-state authority and private production
+Canonical corporate commercial state lives in the private
+`nova-infrastructure-systems/nova-infrastructure-corporate` repository.
+
+Canonical Sharpe Nova OS technical accepted state and private production
 implementation live in the private `nova-infrastructure-systems/nova-core`
 repository.
 
-Public retained accepted-state artifacts are historical projection only and
-cannot establish current corporate accepted state.
+Public retained accepted-state artifacts are historical technical projections
+only and cannot establish current corporate commercial or technical accepted
+state.
 
 ## 4. Current planes
 
