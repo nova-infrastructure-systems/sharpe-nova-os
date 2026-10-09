@@ -1,11 +1,16 @@
 # Public-Surface Coherence Standard
 
-## Public state precedence after accepted-state authority transfer
+## Public state precedence across current authority domains
 
-The accepted-state authority transfer to private
-`nova-infrastructure-systems/nova-core` is effective and repository-verified.
-This public repository is therefore a governed external projection, not the
-canonical corporate accepted-state surface.
+The historical accepted-state transfer to private
+`nova-infrastructure-systems/nova-core` remains effective for Sharpe Nova OS
+technical accepted state and production implementation.
+
+Corporate commercial state is separately authoritative in
+`nova-infrastructure-systems/nova-infrastructure-corporate`.
+
+This public repository is therefore a governed external projection, not an
+authority source for either domain.
 
 ```yaml
 public_projection_precedence:
@@ -17,7 +22,10 @@ public_projection_precedence:
   6: specialized_current_documents
   7: historical_or_Legacy_documents
 
-canonical_corporate_accepted_state:
+canonical_corporate_commercial_state:
+  repository: nova-infrastructure-systems/nova-infrastructure-corporate
+
+canonical_technical_accepted_state:
   repository: nova-infrastructure-systems/nova-core
   registry_path: governance/accepted-state/registry.yaml
 
@@ -30,16 +38,18 @@ public_repository_role:
 
 Public precedence governs only which public projection should be read first.
 It does not make `CURRENT_STATE.md`, public `origin/main`, or any retained public
-registry authoritative for corporate accepted state.
+registry authoritative for corporate commercial state or Sharpe Nova OS
+technical accepted state.
 
-The public projection must remain traceable to the authoritative private state
-without exposing private operating evidence.
+The public projection must remain traceable to the applicable authoritative
+private source without exposing private operating evidence.
 
 ## Exposure rule
 
 ```text
 Public = contract, doctrine, interoperability, approved proof.
-Private = production machinery, proprietary derivation, corporate state, operating evidence.
+Private technical = technical accepted state, production machinery, proprietary derivation, operating evidence.
+Private corporate = corporate commercial state, governance, pricing, sales operations, sanitized evidence.
 Provider-only = secret values and live environment credentials.
 ```
 
@@ -61,7 +71,7 @@ Public files must not expose production topology, secret values, institutional t
 12. Retail payment must not be presented as institutional authentication, tenancy, workflow authorization, or capital authority.
 13. Marketplace submission must not be presented as listing approval or discoverability.
 14. Public repository content must not be presented as the complete production implementation after the private/public split is accepted.
-15. Public `CURRENT_STATE.md` must be labeled as a governed public projection, not authoritative corporate accepted state.
+15. Public `CURRENT_STATE.md` must be labeled as a governed public projection, not authoritative corporate commercial state or technical accepted state.
 16. The former public `agent_files/state/accepted-state-registry.yaml` is historical governed projection only and is no longer retained in the current public tree after authorized sanitization.
 17. Public compatibility code must fail closed against current accepted-state claims and must not silently substitute public `origin/main`, a checkout, or a mirror for the private canonical registry.
 18. Unavailability of the private canonical registry from the public repository must not create chronology, accepted-state, Reflex Memory, implementation, deployment, or capital authority.
@@ -75,18 +85,21 @@ The transfer activation is recorded in:
 After activation:
 
 ```text
-private canonical registry available to authorized private readers
-→ current corporate accepted-state claims may be evaluated there
+private technical registry available to authorized private readers
+→ current technical accepted-state claims may be evaluated there
+
+private corporate archive available to authorized private readers
+→ current corporate commercial-state claims may be evaluated there
 
 public retained registry or public checkout
 → bounded historical context only
-→ no current corporate accepted-state claim
+→ no current corporate commercial-state or technical accepted-state claim
 → no mutation request solely because private state is unavailable
 ```
 
 A public projection may repeat an externally supportable private-state claim
-only when the claim is deliberately projected and bounded. Projection does not
-make the public repository the source of corporate accepted-state authority.
+only when the claim is deliberately projected and bounded. Projection does not make the public repository the source of corporate
+commercial-state or technical accepted-state authority.
 
 ## Commercialization by plane
 
