@@ -20,7 +20,7 @@ def validate() -> list[str]:
     except (OSError, yaml.YAMLError) as exc:
         return [str(exc)]
 
-    if kernel.get("kernel_version") != "1.0.0":
+    if kernel.get("kernel_version") != "1.1.0":
         errors.append("identity kernel version changed")
     if kernel.get("repository_role") != "NON_AUTHORITATIVE_GOVERNED_PROJECTION":
         errors.append("public repository role changed")
@@ -28,10 +28,16 @@ def validate() -> list[str]:
         errors.append("Architect final authority changed")
     if kernel.get("accepted_state_effect") != "none":
         errors.append("public identity projection cannot mutate accepted state")
+    if kernel.get("canonical_corporate_commercial_state_repository") != "nova-infrastructure-systems/nova-infrastructure-corporate":
+        errors.append("corporate commercial-state authority source changed")
+    if kernel.get("canonical_technical_accepted_state_repository") != "nova-infrastructure-systems/nova-core":
+        errors.append("technical accepted-state authority source changed")
 
     category = kernel.get("category") or {}
-    if category.get("canonical") != "pre_execution_decision_context_infrastructure":
+    if category.get("canonical") != "pre_execution_governance_infrastructure":
         errors.append("canonical category changed")
+    if "pre-execution governance infrastructure" not in (category.get("external_statement") or ""):
+        errors.append("external category statement changed")
     if category.get("architectural_frame") != "pre_execution_decision_discipline_layer":
         errors.append("architectural frame changed")
 
@@ -73,6 +79,8 @@ def validate() -> list[str]:
         "Non-Escalation of Authority Principle",
         "action identity != proposal-version identity",
         "nova-identity-kernel-v1.yaml",
+        "nova-infrastructure-systems/nova-infrastructure-corporate",
+        "nova-infrastructure-systems/nova-core",
     ):
         if marker not in system_identity:
             errors.append(f"SYSTEM_IDENTITY missing: {marker}")
@@ -89,6 +97,10 @@ def validate() -> list[str]:
         errors.append("identity change stop rule missing")
     if "No information transformation may increase the authority of its input" not in standard:
         errors.append("Non-Escalation principle missing")
+    if "pre-execution decision-context infrastructure" in standard:
+        errors.append("stale external category remains in identity protection layer")
+    if "authority-conditioned" in category_doc or "authority-conditioned" in system_identity:
+        errors.append("stale authority-conditioned language remains on current identity surfaces")
 
     for marker in (
         '"action_and_proposal_identity_distinct": true',
