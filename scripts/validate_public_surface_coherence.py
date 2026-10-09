@@ -297,7 +297,8 @@ def validate_repository(root: Path = REPO_ROOT) -> list[ValidationError]:
     # Public/private repository transition must fail closed on authority transfer.
     for marker in (
         "Public = contract, doctrine, interoperability, and approved proof.",
-        "Private = production machinery, proprietary derivation, corporate state, and operating evidence.",
+        "Private technical = technical accepted state, production machinery, proprietary derivation, and operating evidence.",
+        "Private corporate = corporate commercial state, governance, pricing, sales operations, and sanitized evidence.",
         "private repository created\n!= authority transferred",
         "Architect explicitly accepts authority transfer",
     ):
