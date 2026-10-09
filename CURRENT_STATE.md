@@ -255,7 +255,7 @@ repository_transition_effects:
   canonical_production_cutover_effect: operator_observed_private_source_live
   public_runtime_removal_effect: none
   technical_accepted_state_authority_transfer_effect: effective_repository_verified
-  canonical_corporate_state_changed: true
+  canonical_technical_state_changed: true
   cross_agent_current_use_set_changed: false
   retail_runtime_effect: none
   payment_effect: none
