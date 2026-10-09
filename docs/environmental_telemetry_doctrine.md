@@ -1,7 +1,7 @@
 # Nova Environmental Telemetry Doctrine
 
-**Status:** SUPERSEDED HISTORICAL DOCTRINE  
-**Current category:** Sharpe Nova OS is pre-execution governance infrastructure for consequential machine-prepared capital actions.  
+**Status:** SUPERSEDED HISTORICAL DOCTRINE<br>
+**Current category:** Sharpe Nova OS is pre-execution governance infrastructure for consequential machine-prepared capital actions.<br>
 **Current authority boundary:** Agent prepares action. Nova structures review context. Local authority decides. External systems execute. Nova does not execute.
 
 This file preserves an earlier product-generation framing for historical traceability. It must not be used as current category, authority, product, pricing, monetization, GTM, or implementation guidance. Where statements below conflict with current governed doctrine, the current corporate and technical authority domains control.
