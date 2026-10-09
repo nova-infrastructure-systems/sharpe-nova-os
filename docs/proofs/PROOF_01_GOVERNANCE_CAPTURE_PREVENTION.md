@@ -4,7 +4,7 @@ Sharpe Nova OS — Institutional Proof Surface
 
 Based on Simulation K — Governance Exploit Reflex
 
-Sharpe Nova OS is a pre-execution environmental governance layer that emits non-authority context for proposed capital actions before execution.
+Sharpe Nova OS is pre-execution governance infrastructure that structures non-authority review context for consequential machine-prepared capital actions before local authority decides.
 
 This proof documents a governance capture failure class, the unconstrained path modeled without Nova, the constrained context Nova returned before execution, and the measured scenario difference.
 
