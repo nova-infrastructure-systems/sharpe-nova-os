@@ -1,12 +1,12 @@
 # Sharpe Nova OS — Current State
 
-**Effective date:** October 9, 2026  
-**Operational evidence baseline:** October 7, 2026 unless a later date is stated  
-**Coherence reconciliation date:** October 9, 2026  
-**Authority:** Architect  
-**Coherence review:** Jarvis-Nova CCO  
-**Repository role:** governed public current-state projection  
-**Canonical corporate commercial-state authority:** `nova-infrastructure-systems/nova-infrastructure-corporate`  
+**Effective date:** October 9, 2026<br>
+**Operational evidence baseline:** October 7, 2026 unless a later date is stated<br>
+**Coherence reconciliation date:** October 9, 2026<br>
+**Authority:** Architect<br>
+**Coherence review:** Jarvis-Nova CCO<br>
+**Repository role:** governed public current-state projection<br>
+**Canonical corporate commercial-state authority:** `nova-infrastructure-systems/nova-infrastructure-corporate`<br>
 **Canonical Sharpe Nova OS technical accepted-state authority:** `nova-infrastructure-systems/nova-core`
 
 This file is the approved public projection of current Sharpe Nova OS state. It
