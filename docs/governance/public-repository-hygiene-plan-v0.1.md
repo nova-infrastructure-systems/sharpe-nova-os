@@ -137,7 +137,7 @@ The public repository metadata should eventually read approximately:
 
 ```text
 Description:
-Sharpe Nova OS is pre-execution decision-context infrastructure for
+Sharpe Nova OS is pre-execution governance infrastructure for
 consequential machine-prepared capital actions.
 
 Topics:
