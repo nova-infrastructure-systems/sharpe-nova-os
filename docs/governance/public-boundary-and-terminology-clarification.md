@@ -8,9 +8,12 @@ The purpose is interpretation safety. This pass does not change runtime behavior
 
 ## Current Canonical Boundary
 
-Sharpe Nova OS is pre-execution environmental governance infrastructure.
+Sharpe Nova OS is pre-execution governance infrastructure for consequential
+machine-prepared capital actions.
 
-Its core mechanism is pre-action context: reviewable environmental state, source-segmented records, reproducibility metadata, proof references, and governance chronology emitted before local systems decide how to act.
+Its core mechanism is bounded governed pre-execution review state: source-aware
+evidence, applicable constraints, unresolved conditions, relevant prior context,
+integrity material, and explicit handoff before local authority decides.
 
 ## Why This Matters
 
@@ -39,13 +42,14 @@ These words may appear in historical materials, negative boundary statements, in
 
 ## Current Interpretation Rules
 
-In the current canonical doctrine, Nova emits pre-action context and non-authority telemetry before local systems decide how to act.
+In the current canonical doctrine, Nova structures bounded governed
+pre-execution review state before local authority decides.
 
 Execution, approval, denial, routing, settlement, payment, and capital movement remain outside Nova.
 
 Current repository language should be read through these rules:
 
-- Nova may describe environmental state before action.
+- Nova may describe relevant state before action.
 - Nova may preserve reviewable governance evidence.
 - Nova may support reproducible proof replay and classification stability.
 - Nova may help local reviewers reconstruct workflow chronology.
