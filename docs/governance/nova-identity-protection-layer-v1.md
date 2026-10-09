@@ -1,10 +1,10 @@
 # Nova Identity Protection Layer v1
 
-**Status:** active governed public projection  
-**Control owner:** Jarvis-Nova CCO  
-**Decision authority:** Architect  
-**Corporate narrative authority source:** `nova-infrastructure-systems/nova-infrastructure-corporate`  
-**Technical accepted-state authority source:** `nova-infrastructure-systems/nova-core`  
+**Status:** active governed public projection<br>
+**Control owner:** Jarvis-Nova CCO<br>
+**Decision authority:** Architect<br>
+**Corporate narrative authority source:** `nova-infrastructure-systems/nova-infrastructure-corporate`<br>
+**Technical accepted-state authority source:** `nova-infrastructure-systems/nova-core`<br>
 **Machine projection:** `docs/governance/nova-identity-kernel-v1.yaml`
 
 ## Purpose
