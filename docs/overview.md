@@ -1,8 +1,13 @@
 # Sharpe Nova OS Overview
 
-Sharpe Nova OS is pre-execution environmental governance infrastructure for autonomous capital systems.
+Sharpe Nova OS is pre-execution governance infrastructure for consequential
+machine-prepared capital actions.
 
-Nova emits environmental state, classification context, reproducibility metadata, source segmentation, and non-authority telemetry before local systems decide whether or how to act.
+Nova structures bounded governed pre-execution review state around an exact
+prepared action before local authority decides. That state can include source
+provenance, source state, applicable constraints, unresolved conditions,
+relevant prior context, material changes, chronology references, and integrity
+material.
 
 Nova does not authorize execution. It does not move capital, recommend trades, predict markets, or optimize portfolios.
 
