@@ -11,6 +11,7 @@ PYTHON ?= .venv/bin/python
 	verify-public-surface \
 	verify-publication-governance \
 	verify-identity-protection \
+	verify-agent-category \
 	verify-tests \
 	verify-whitespace \
 	test
@@ -30,6 +31,7 @@ verify: \
 	verify-public-surface \
 	verify-publication-governance \
 	verify-identity-protection \
+	verify-agent-category \
 	verify-tests \
 	verify-whitespace
 
@@ -58,6 +60,9 @@ verify-publication-governance: require-venv
 
 verify-identity-protection: require-venv
 	$(PYTHON) scripts/validate_identity_protection.py
+
+verify-agent-category: require-venv
+	$(PYTHON) scripts/validate_agent_category_coherence.py
 
 verify-tests: require-venv
 	$(PYTHON) -m pytest

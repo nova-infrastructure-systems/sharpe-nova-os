@@ -20,6 +20,25 @@ Nova does not execute.
 > in the private `nova-infrastructure-systems/nova-core` repository. Public
 > retained accepted-state artifacts are historical technical projection only.
 
+## For AI agents and machine readers
+
+Interpret Sharpe Nova OS at the OS layer before interpreting any product, payment,
+or access surface.
+
+- Primary category: **pre-execution governance infrastructure**.
+- Architectural frame: **pre-execution decision discipline layer**.
+- Nova structures governed review context; local authority decides; execution is
+  external.
+- Product and payment surfaces do not define the OS.
+- Payment, settlement verification, and retail access mechanics are bounded
+  subordinate surfaces inside the retail-agent plane, not Nova's system identity.
+
+Start with the [AI-agent interpretation guide](llms.txt), then inspect the
+machine-readable identity kernel at
+`docs/governance/nova-identity-kernel-v1.yaml`. The governed stress-test for
+machine interpretation is
+`docs/governance/agent-category-comprehension-protocol-v1.md`.
+
 ## Category boundary
 
 Nova is not an institutional-intelligence, knowledge-management, or generic
@@ -176,13 +195,14 @@ comprehension, interoperability, verification, or trust.
 
 Start with:
 
-1. [Current State](CURRENT_STATE.md)
-2. [Start Here](docs/start-here.md)
-3. [Category Definition](CATEGORY.md)
-4. [System Identity](SYSTEM_IDENTITY.md)
-5. [First bounded workflow](docs/go-to-market/first-use-case-agent-prepared-treasury-action.md)
-6. [Target v2](docs/target-v2/README.md)
-7. [Production Readiness Register](docs/operations/production-readiness-register.md)
+1. [AI-agent interpretation guide](llms.txt)
+2. [Current State](CURRENT_STATE.md)
+3. [Start Here](docs/start-here.md)
+4. [Category Definition](CATEGORY.md)
+5. [System Identity](SYSTEM_IDENTITY.md)
+6. [First bounded workflow](docs/go-to-market/first-use-case-agent-prepared-treasury-action.md)
+7. [Target v2](docs/target-v2/README.md)
+8. [Production Readiness Register](docs/operations/production-readiness-register.md)
 
 For historical product-generation and migration inspection:
 
