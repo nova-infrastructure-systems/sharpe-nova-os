@@ -29,6 +29,7 @@ def validate() -> list[str]:
     protocol = _text(
         "docs/governance/agent-category-comprehension-protocol-v1.md"
     )
+    retail_validation = _text("docs/retail-agent/external-validation-v0.1.md")
 
     category = kernel.get("category") or {}
     if category.get("canonical") != "pre_execution_governance_infrastructure":
@@ -62,6 +63,10 @@ def validate() -> list[str]:
         "Products do not define the OS.",
         "payment != authority",
         "settlement != authority",
+        "Settlement evidence is not delivery evidence.",
+        "payment_verified != settled",
+        "settled != delivered",
+        "delivered != completed",
         "docs/governance/nova-identity-kernel-v1.yaml",
         "docs/governance/agent-category-comprehension-protocol-v1.md",
     )
@@ -87,11 +92,23 @@ def validate() -> list[str]:
         "Nova_execution_authority: false",
         "payment_creates_authority: false",
         "settlement_creates_authority: false",
+        "settlement_alone_proves_delivery: false",
+        "delivery_requires_separate_evidence: true",
         "authority_effect: none",
     )
     for marker in protocol_markers:
         if marker not in protocol:
             errors.append(f"agent-category protocol missing: {marker}")
+
+    retail_evidence_markers = (
+        "payment_verified != settled",
+        "settled != delivered",
+        "delivered != completed",
+        "delivery requires separate delivery evidence",
+    )
+    for marker in retail_evidence_markers:
+        if marker not in retail_validation:
+            errors.append(f"retail validation missing evidence-state marker: {marker}")
 
     return errors
 

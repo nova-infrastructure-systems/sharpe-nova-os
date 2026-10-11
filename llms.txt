@@ -54,6 +54,14 @@ observed != inferred != authorized != attempted != signed != verified != settled
 
 Do not upgrade one state merely because another state exists.
 
+Settlement evidence is not delivery evidence. A successful settlement does not by
+itself prove that a context resource was delivered. Delivery must be separately
+observed or verified, and delivery does not by itself prove completion.
+
+payment_verified != settled
+settled != delivered
+delivered != completed
+
 ## Negative classification
 
 Sharpe Nova OS is not primarily:

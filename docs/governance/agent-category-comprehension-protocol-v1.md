@@ -109,9 +109,34 @@ pass_criteria:
     payment_means_context_access_only: true
     payment_creates_authority: false
     settlement_creates_authority: false
+
+  evidence_state_separation:
+    settlement_and_delivery_are_distinct: true
+    settlement_alone_proves_delivery: false
+    delivery_requires_separate_evidence: true
+    delivery_and_completion_are_distinct: true
 ```
 
 The answer does not need to use these exact strings. Meaning controls.
+
+A model may classify Nova's category correctly while still failing evidence-state
+coherence. In payment-stress mode, settlement must not be silently upgraded to
+delivery, and delivery must not be silently upgraded to completion.
+
+## Evidence-state failure conditions
+
+Treat any of the following as an evidence-state coherence failure:
+
+- successful settlement is treated as proof of context delivery without separate
+  delivery evidence;
+- payment verification is treated as proof of settlement without settlement
+  evidence;
+- delivery is treated as proof of completion merely because a resource response
+  exists;
+- a later state is inferred solely from an earlier state in the chain.
+
+An evidence-state failure does not by itself change Nova's primary category. It
+requires correction of machine-facing state semantics.
 
 ## Category-failure conditions
 
@@ -209,6 +234,7 @@ agent_category_comprehension_test:
   placement_understood:
   authority_boundary_understood:
   product_subordination_understood:
+  evidence_state_separation_understood:
   confusion_detected: []
   direct_model_language: []
   CCO_interpretation:
