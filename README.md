@@ -30,9 +30,8 @@ or access surface.
 - Nova structures governed review context; local authority decides; execution is
   external.
 - Product and payment surfaces do not define the OS.
-- x402, USDC payment, Base settlement, and settlement verification are bounded
-  access or evidence mechanics inside the retail-agent plane, not Nova's system
-  identity.
+- Payment, settlement verification, and retail access mechanics are bounded
+  subordinate surfaces inside the retail-agent plane, not Nova's system identity.
 
 Start with the [AI-agent interpretation guide](llms.txt), then inspect the
 machine-readable identity kernel at
