@@ -300,6 +300,17 @@ Evidence required:
 - settlement/reconciliation record;
 - failed-payment behavior fails closed.
 
+Each Gate P3 state requires its own evidence. Payment verification, settlement or
+reconciliation, context delivery, and completion must not be collapsed. In
+particular, a successful settlement or reconciliation record does not by itself
+prove context delivery; delivery requires separate delivery evidence.
+
+```text
+payment_verified != settled
+settled != delivered
+delivered != completed
+```
+
 ### Gate P4 — Production controls
 
 Evidence required:
