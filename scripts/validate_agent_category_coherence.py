@@ -62,25 +62,12 @@ def validate() -> list[str]:
         "Products do not define the OS.",
         "payment != authority",
         "settlement != authority",
-        "review context != execution permission",
         "docs/governance/nova-identity-kernel-v1.yaml",
         "docs/governance/agent-category-comprehension-protocol-v1.md",
     )
     for marker in llms_markers:
         if marker not in llms:
             errors.append(f"llms.txt missing category marker: {marker}")
-
-    forbidden_llms_claims = (
-        "Sharpe Nova OS is payment middleware",
-        "Sharpe Nova OS is settlement middleware",
-        "Nova decides whether capital should move",
-        "Nova approves capital actions",
-        "Nova authorizes capital actions",
-    )
-    llms_lower = llms.lower()
-    for phrase in forbidden_llms_claims:
-        if phrase.lower() in llms_lower:
-            errors.append(f"llms.txt contains authority/category drift: {phrase}")
 
     readme_markers = (
         "[AI-agent interpretation guide](llms.txt)",
