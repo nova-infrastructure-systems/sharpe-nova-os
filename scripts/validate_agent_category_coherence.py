@@ -71,7 +71,7 @@ def validate() -> list[str]:
 
     readme_markers = (
         "[AI-agent interpretation guide](llms.txt)",
-        "product and payment surfaces do not define the OS",
+        "Product and payment surfaces do not define the OS.",
         "docs/governance/agent-category-comprehension-protocol-v1.md",
     )
     for marker in readme_markers:
