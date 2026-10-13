@@ -32,7 +32,7 @@ Non-authority is not non-essential.
 
 Nova does not control execution.
 
-Nova controls review readiness.
+Nova structures governed review context for local authority.
 
 Execution systems may control movement.
 
@@ -115,15 +115,15 @@ Non-authority can become a constraint if Nova is perceived as:
 
 This is the main commercial risk.
 
-Nova must not be positioned as optional insight.
+Nova should not be reduced to optional insight.
 
-Nova should be positioned as required review-context infrastructure before local authority acts.
+Whether Nova becomes required review-context infrastructure before local authority acts is a market hypothesis. Current evidence does not establish required-infrastructure status; that must be earned through independent recurring workflow reliance.
 
 ## Moat Logic
 
 Nova's potential moat is not control over execution.
 
-Nova's potential moat is durable ownership of the governed review-context standard and institution-owned governance chronology.
+Nova's moat hypothesis under test is durable ownership of the governed review-context standard together with institution-owned governance chronology. Current evidence does not establish that this is a moat.
 
 ```yaml
 moat_logic:
@@ -186,7 +186,7 @@ Nova blocks actions that lack governed review context.
 
 ## Required Review Context vs Execution Control
 
-Nova can be required without becoming an execution controller.
+An institution may choose to require Nova-emitted governed review context without making Nova an execution controller.
 
 An institution may decide:
 
@@ -247,7 +247,7 @@ Nova gives up:
 * immediate enforcement optics
 * simple "we stop bad actions" marketing
 
-This tradeoff is acceptable only if Nova becomes required review-context infrastructure.
+This tradeoff becomes commercially meaningful only if institutions independently treat Nova-emitted governed review context as necessary in recurring consequential workflows.
 
 ## Commercial Packaging Rule
 
@@ -280,7 +280,7 @@ governed review context before local authority decides
 Use:
 
 ```text
-Nova does not control execution. Nova controls review readiness.
+Nova does not control execution. Nova structures governed review context for local authority.
 ```
 
 Use:
@@ -421,13 +421,13 @@ For the open-source and business-model boundary, see:
 
 ## Final Rule
 
-Nova's non-authority stance is commercially viable only if the market understands that review readiness is required before authority acts.
+Nova's non-authority stance becomes commercially durable only if institutions independently demonstrate that governed review context is necessary before authority acts in recurring consequential workflows.
 
 Non-authority is not non-essential.
 
 Nova does not control execution.
 
-Nova controls review readiness.
+Nova structures governed review context for local authority.
 
 Local authority decides.
 
