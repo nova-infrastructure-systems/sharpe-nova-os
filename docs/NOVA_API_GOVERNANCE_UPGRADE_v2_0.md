@@ -3,10 +3,34 @@
 
 ---
 
-# Status
-**REQUIRED — Canonical Nova API Governance Upgrade**
+# Current Status
+**HISTORICAL DESIGN / LEGACY GOVERNANCE ARTIFACT — NOT CURRENT REQUIRED IMPLEMENTATION**
 
-This document defines the next control-layer expansion required for Sharpe Nova OS.
+This document is retained for provenance, historical design inspection, replay,
+migration, negative testing, and dependency analysis. Its historical REQUIRED /
+canonical language does not create current Nova Core implementation authority and
+does not override the current non-authority identity.
+
+Current canonical boundary:
+
+```text
+Agent prepares action.
+Nova structures review context.
+Local authority decides.
+External systems execute.
+Nova does not execute.
+```
+
+`authority_effect = none`
+
+The decision-admission, DENY/HALT, permission-budget, queue-governance, and related
+control semantics below must be interpreted as historical design context unless
+separately re-authorized through current technical change control.
+
+# Historical Status
+**SUPERSEDED HISTORICAL DIRECTIVE — formerly marked REQUIRED / canonical**
+
+This document historically defined a proposed control-layer expansion for Sharpe Nova OS.
 
 It is not a feature roadmap.
 
