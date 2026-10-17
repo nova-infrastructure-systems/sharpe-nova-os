@@ -1,4 +1,10 @@
 # Governance Rollout
+## Current status
+
+**Historical Legacy v1 governance-rollout reference — not current Nova authority semantics or integration guidance.**
+
+The statements below about an authoritative API, binding refusal states, and `decision_status` describe legacy decision-admission behavior only. They do not authorize a current Nova approval, denial, execution gate, or implementation. The approved boundary is: Agent prepares action. Nova structures review context. Local authority decides. External systems execute. Nova does not execute. `authority_effect = none`. For current identity and state, see the repository root `SYSTEM_IDENTITY.md` and `CURRENT_STATE.md`.
+
 
 Sharpe Nova OS exposes governance as part of the control-plane interface.
 
