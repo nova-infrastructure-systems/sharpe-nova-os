@@ -1,5 +1,11 @@
 # Nova State Model
 
+## Current status
+
+**Historical Legacy v1 state and decision-admission description — not the current authority contract.**
+
+The epoch, action-policy, `allowed`, and permitted-decision language below is historical system-model context, not a current claim that Nova determines what capital actions are permitted. Nova structures bounded pre-execution review context. Local authority decides. External systems execute. Nova does not execute. `authority_effect = none`. See root `SYSTEM_IDENTITY.md` and `CURRENT_STATE.md` for current interpretation; no current implementation or authority change is created here.
+
 Nova exposes a system state composed of:
 
 - epoch (time bucket)

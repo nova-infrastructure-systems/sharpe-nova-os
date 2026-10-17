@@ -2,6 +2,10 @@
 
 ## Status
 
+**Current status: historical Legacy v1 rollout-policy reference — not a current required implementation or integration contract.**
+
+The REQUIRED designation, key-level governance activation, binding `decision_status`, execution-adapter obligations, and admission mechanics below describe the historical Legacy v1 model. They do not establish current Nova decision, approval, refusal, or execution authority and must not be carried into new contracts without separate technical authorization. Current boundary: Agent prepares action. Nova structures review context. Local authority decides. External systems execute. Nova does not execute. `authority_effect = none`. The current public `SYSTEM_IDENTITY.md` and `CURRENT_STATE.md` take precedence for external interpretation.
+
 REQUIRED — Nova API Governance Activation Reference
 
 ---
