@@ -1,5 +1,15 @@
 # Agent Access-Class Separation
 
+> **Historical authorization snapshot (July 30, 2026).** This specification
+> records access-class design and authorization posture before a later,
+> separately authorized retail-agent service became publicly active. The
+> `false` and `future_separate_approval_required` flags below describe the
+> historical specification; they do not report or revoke current retail
+> authorization. Consult [CURRENT_STATE.md](../../CURRENT_STATE.md) for the
+> dated public projection. Retail access to institutional data remains
+> prohibited, and this document creates no new technical, production,
+> marketplace, chronology, Reflex Memory, or capital authority.
+
 ## Status
 
 ```yaml
