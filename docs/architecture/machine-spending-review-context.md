@@ -1,5 +1,15 @@
 # Machine-Spending Review Context
 
+> **Historical authorization snapshot (July 30, 2026).** This specification
+> preserves pre-activation access and authorization posture from that date. A
+> later, separately authorized retail-agent public service became active; the
+> statement below that retail or marketplace access "is not authorized" is
+> historical to this specification and does not revoke current retail public
+> service authority. Institution-owned context remains private and separately
+> governed. Consult [CURRENT_STATE.md](../../CURRENT_STATE.md) for the dated
+> public projection. This clarification creates no new technical, production,
+> marketplace, chronology, Reflex Memory, or capital authority.
+
 ## Status
 
 ```yaml
