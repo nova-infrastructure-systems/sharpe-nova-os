@@ -29,7 +29,7 @@ This is a market and example priority, not an asset recommendation, allocation r
 ## Authority boundary
 
 ```text
-Agent prepares action.
+Agent prepares an action.
 Nova structures review context.
 Local authority decides.
 External systems execute.
