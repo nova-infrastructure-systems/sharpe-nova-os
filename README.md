@@ -1,43 +1,69 @@
 # Sharpe Nova OS
 
+### Capital should not continue operating on yesterday's assumptions.
+
 **Pre-execution governance infrastructure for consequential machine-prepared capital actions.**
 
-Sharpe Nova OS structures governed pre-execution review state around an exact
-capital action before local authority decides.
+Autonomous systems can continue operating within technically valid permissions even when the institutional assumptions supporting those permissions have changed.
+
+Sharpe Nova OS preserves the governing review context behind delegated capital authority and makes material changes that may require reconsideration visible before local authority decides.
+
+## The problem
+
+An institution may know what an agent did and whether it had permission.
+
+A harder question remains:
+
+**Does the governing rationale behind that permission still apply to this exact capital action now?**
+
+Nova structures the evidence, applicable institution-defined constraints, unresolved conditions, source state, and relevant accepted prior context around the exact proposal version under review. It does not independently determine whether delegated authority remains applicable.
+
+## First focus: 24/7 treasury operations
+
+Our initial market focus is autonomous and semi-autonomous treasury activity involving **USDC, tokenized assets, and Bitcoin**. USDC is the primary operating context; tokenized Treasuries and other real-world assets are the primary institutional expansion surface; Bitcoin is a secondary reserve and collateral context.
+
+As agents prepare capital actions across wallets, custodians, treasury platforms, and settlement systems, the assumptions behind institutional review may change. Nova makes the review context and material changes visible while preserving institutional authority.
+
+This is a market and example priority, not an asset recommendation, allocation rule, or policy. The authority layer remains asset-neutral.
+
+## Authority boundary
 
 ```text
-Agent prepares an action.
+Agent prepares action.
 Nova structures review context.
 Local authority decides.
 External systems execute.
 Nova does not execute.
 ```
 
-> **Repository role:** this public repository is the governed external projection of
-> Sharpe Nova OS. Canonical corporate commercial state lives in the private
-> `nova-infrastructure-systems/nova-infrastructure-corporate` repository.
-> Canonical technical accepted state and private production implementation live
-> in the private `nova-infrastructure-systems/nova-core` repository. Public
-> retained accepted-state artifacts are historical technical projection only.
+Nova does not approve, authorize, sign, custody, settle, or execute capital. Any reconsideration, delay, or enforcement remains with separately authorized institutional and external systems.
+
+## Technical architecture
+
+Sharpe Nova OS is a pre-execution decision discipline layer that conditions capital through telemetry, governed Reflex Memory, and constraint logic before execution. It preserves bounded review context without turning information, history, or validation into permission.
+
+> **Repository role:** this public repository is the governed external projection of Sharpe Nova OS. Canonical corporate commercial state lives in the private `nova-infrastructure-systems/nova-infrastructure-corporate` repository. Canonical technical accepted state and private production implementation live in the private `nova-infrastructure-systems/nova-core` repository. Public retained accepted-state artifacts are historical technical projection only.
+
+## Explore the system
+
+- [Current public state](CURRENT_STATE.md)
+- [System identity](SYSTEM_IDENTITY.md)
+- [Category definition](CATEGORY.md)
+- [AI-agent interpretation guide](llms.txt)
+- [First bounded treasury workflow](docs/go-to-market/first-use-case-agent-prepared-treasury-action.md)
+- [Technical architecture](docs/architecture/external-review-context-contract-v2.md)
 
 ## For AI agents and machine readers
 
-Interpret Sharpe Nova OS at the OS layer before interpreting any product, payment,
-or access surface.
+Interpret Sharpe Nova OS at the OS layer before interpreting any product, payment, or access surface.
 
 - Primary category: **pre-execution governance infrastructure**.
 - Architectural frame: **pre-execution decision discipline layer**.
-- Nova structures governed review context; local authority decides; execution is
-  external.
+- Nova structures governed review context; local authority decides; execution is external.
 - Product and payment surfaces do not define the OS.
-- Payment, settlement verification, and retail access mechanics are bounded
-  subordinate surfaces inside the retail-agent plane, not Nova's system identity.
+- Payment, settlement verification, and retail access mechanics are bounded subordinate surfaces inside the retail-agent plane, not Nova's system identity.
 
-Start with the [AI-agent interpretation guide](llms.txt), then inspect the
-machine-readable identity kernel at
-`docs/governance/nova-identity-kernel-v1.yaml`. The governed stress-test for
-machine interpretation is
-`docs/governance/agent-category-comprehension-protocol-v1.md`.
+Start with the [AI-agent interpretation guide](llms.txt), then inspect the machine-readable identity kernel at `docs/governance/nova-identity-kernel-v1.yaml`. The governed stress-test for machine interpretation is `docs/governance/agent-category-comprehension-protocol-v1.md`.
 
 ## Category boundary
 
